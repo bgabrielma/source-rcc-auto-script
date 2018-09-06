@@ -42,8 +42,10 @@ namespace rcc_script_system
             preview.Text += "// Companhia: example" + "\n\n";
 
             preview.Text += "// Para titulos, segue-se com um '#!'.  Ex: #!tópico 1" + "\n";
-            preview.Text += "// Titulo do programa será com '&'. Exemplo em baixo" + "\n";
-            preview.Text += "// Para parar em uma determinada linha acrescente ';;' no final da linha" + "\n";
+            preview.Text += "// Identificação a aula será identificada com '&'. Exemplo em baixo" + "\n";
+            preview.Text += "// Para parar em uma determinada linha acrescente ';;' no final da linha" + "\n\n";
+            preview.Text += "// Para colocar a sua TAG, Identifique com um [TAG].  Ex: >Minha TAG: [TAG]" + "\n";
+            preview.Text += "// Para colocar o seu Nick, Identifique com um [Nick].  Ex: >Meu nick: [Nick]" + "\n\n";
             preview.Text += "// Para frases, segue com um '>'.  Ex: >linha 1" + "\n\n";
             preview.Text += "&: nome do script" + "\n\n";
             preview.Text += "#!TÓPICO NÚMERO UM\n\n";

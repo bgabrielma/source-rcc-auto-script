@@ -118,9 +118,6 @@ namespace rcc_script_system
                 Stream stream = client.OpenRead(url);
                 Bitmap bitmap = new Bitmap(stream);
 
-                if (bitmap != null)
-                    bitmap.Save("test.gif", ImageFormat.Gif);
-
                 rcc_user.Image = bitmap;
 
                 stream.Flush();

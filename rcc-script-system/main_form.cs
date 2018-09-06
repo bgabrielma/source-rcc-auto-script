@@ -195,7 +195,7 @@ namespace rcc_script_system
                 }
                 if (MAIN_TITLE_TOKEN.IsMatch(contentByLine))
                 {
-                    lines.Add(new Line(contentByLine.Replace(">", ""), titles.Count));
+                    lines.Add(new Line(contentByLine.Replace(">", "").Replace("[Nick]", nickRCC.Text).Replace("[TAG]", fixTAG(tagRCCIdentification.Text)), titles.Count));
                 }
                 if (COMMENT_TOKEN.IsMatch(contentByLine))
                 {
@@ -267,11 +267,7 @@ namespace rcc_script_system
             }
             else
             {
-                if (!tagRCC.Contains('['))
-                    tagRCC= '[' + tagRCC;
-
-                if (!tagRCC.Contains(']'))
-                    tagRCC = tagRCC + ']';
+                tagRCC = fixTAG(tagRCC);
 
                 tagRCCIdentification.ForeColor = Color.Black;
             }
@@ -294,6 +290,16 @@ namespace rcc_script_system
                 setProperties();
                 form.Show();
             }
+        }
+
+        public string fixTAG(string x)
+        {
+            if (!x.Contains('['))
+                x = '[' + x;
+
+            if (!x.Contains(']'))
+                x = x + ']';
+            return x;
         }
 
         public void reset()
@@ -325,16 +331,6 @@ namespace rcc_script_system
             generateForm.Show();
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void loadProperties()
         {
             nickRCC.Text = nameRCC = Properties.SettingsRCC.Default.user;
@@ -346,6 +342,37 @@ namespace rcc_script_system
             Properties.SettingsRCC.Default.user = nickRCC.Text;
             Properties.SettingsRCC.Default.tag = tagRCCIdentification.Text;
             Properties.SettingsRCC.Default.Save();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            Dispose();
+        }
+
+        private void min_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void close_MouseHover(object sender, EventArgs e)
+        {
+            close.BackColor = Color.LightSlateGray;
+        }
+
+
+        private void about_Click(object sender, EventArgs e)
+        {
+            Form about = Application.OpenForms["About"];
+            if (about != null)
+            {
+                MessageBox.Show("Já se encontra uma janela aberta. Fecha a mesma e tente novamente!",
+                    "Ocorreu um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // open controlPanel's form
+            About aboutForm = new About();
+            aboutForm.Show();
         }
     }
 }
