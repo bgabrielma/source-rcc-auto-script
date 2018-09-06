@@ -76,6 +76,9 @@ namespace rcc_script_system
 
             InitializeComponent();
 
+            //load properties - nick and tag
+            loadProperties();
+
             //Blocking system to recreate new borders.
             /**
              * TODO: Fixed bug -> add a file and program will create an border into label 
@@ -287,7 +290,10 @@ namespace rcc_script_system
             controlPanel form = new controlPanel(openFile, titles, comments, lines, nameScript, nameRCC, tagRCC);
 
             if (error == 0)
+            {
+                setProperties();
                 form.Show();
+            }
         }
 
         public void reset()
@@ -327,6 +333,19 @@ namespace rcc_script_system
         private void label12_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public void loadProperties()
+        {
+            nickRCC.Text = nameRCC = Properties.SettingsRCC.Default.user;
+            tagRCCIdentification.Text = tagRCC = Properties.SettingsRCC.Default.tag;
+        }
+
+        public void setProperties()
+        {
+            Properties.SettingsRCC.Default.user = nickRCC.Text;
+            Properties.SettingsRCC.Default.tag = tagRCCIdentification.Text;
+            Properties.SettingsRCC.Default.Save();
         }
     }
 }
