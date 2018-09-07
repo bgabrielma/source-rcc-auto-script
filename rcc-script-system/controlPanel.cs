@@ -370,7 +370,6 @@ namespace rcc_script_system
 
         public void showStopNotification()
         {
-            rccNotify.Text = "My applicaiton";
             rccNotify.BalloonTipTitle = "Atenção, " + this.nameRCC;
             rccNotify.BalloonTipText = "O script foi pausado com sucesso!";
             rccNotify.ShowBalloonTip(6000);

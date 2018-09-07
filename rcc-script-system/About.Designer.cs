@@ -47,6 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
@@ -183,7 +184,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(17, 240);
+            this.label5.Location = new System.Drawing.Point(15, 239);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 18);
             this.label5.TabIndex = 14;
@@ -194,7 +195,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(17, 275);
+            this.label6.Location = new System.Drawing.Point(15, 268);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(196, 18);
             this.label6.TabIndex = 15;
@@ -267,12 +268,24 @@
             this.label10.TabIndex = 22;
             this.label10.Text = ",SrGabriel, Goufix e luuuiiiz.";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(15, 298);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(206, 18);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "+ Novo sistema de notificações";
+            // 
             // About
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(347, 436);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -325,5 +338,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
     }
 }
