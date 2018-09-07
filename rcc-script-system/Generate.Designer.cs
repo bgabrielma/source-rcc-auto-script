@@ -52,6 +52,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.saveFile = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
@@ -304,7 +305,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(862, 310);
+            this.label7.Location = new System.Drawing.Point(865, 215);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(300, 18);
             this.label7.TabIndex = 23;
@@ -335,11 +336,24 @@
             this.saveFile.UseVisualStyleBackColor = true;
             this.saveFile.Click += new System.EventHandler(this.saveFile_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(865, 310);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(271, 18);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "*Aperte ENTER para cada linha inserida.";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Generate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1187, 676);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.saveFile);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel7);
@@ -402,5 +416,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button saveFile;
+        private System.Windows.Forms.Label label8;
     }
 }

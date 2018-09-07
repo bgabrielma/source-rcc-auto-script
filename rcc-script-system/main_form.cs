@@ -374,5 +374,10 @@ namespace rcc_script_system
             About aboutForm = new About();
             aboutForm.Show();
         }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            importFile.PerformClick();
+        }
     }
 }

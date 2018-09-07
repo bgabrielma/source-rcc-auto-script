@@ -457,7 +457,7 @@
             // 
             this.rccNotify.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.rccNotify.Icon = ((System.Drawing.Icon)(resources.GetObject("rccNotify.Icon")));
-            this.rccNotify.Text = "notifyIcon1";
+            this.rccNotify.Text = "RCC - Ferramenta de Aulas";
             this.rccNotify.Visible = true;
             // 
             // controlPanel
@@ -488,7 +488,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "controlPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "controlPanel";
+            this.Text = "[RCC] - Painel de controle";
             this.Load += new System.EventHandler(this.controlPanel_Load);
             this.Shown += new System.EventHandler(this.controlPanel_Shown);
             this.Leave += new System.EventHandler(this.controlPanel_Leave);

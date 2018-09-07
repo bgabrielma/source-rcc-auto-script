@@ -141,16 +141,16 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(15, 70);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 18);
+            this.label3.Size = new System.Drawing.Size(127, 18);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Nova versão - 1.3:";
+            this.label3.Text = "Nova versão - 1.4:";
             // 
             // scriptName
             // 
             this.scriptName.AutoSize = true;
             this.scriptName.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
             this.scriptName.ForeColor = System.Drawing.Color.Black;
-            this.scriptName.Location = new System.Drawing.Point(15, 116);
+            this.scriptName.Location = new System.Drawing.Point(15, 104);
             this.scriptName.Name = "scriptName";
             this.scriptName.Size = new System.Drawing.Size(283, 36);
             this.scriptName.TabIndex = 11;
@@ -162,7 +162,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(15, 161);
+            this.label2.Location = new System.Drawing.Point(15, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 18);
             this.label2.TabIndex = 12;
@@ -173,7 +173,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(15, 194);
+            this.label4.Location = new System.Drawing.Point(15, 182);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(312, 36);
             this.label4.TabIndex = 13;
@@ -184,7 +184,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(15, 239);
+            this.label5.Location = new System.Drawing.Point(15, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 18);
             this.label5.TabIndex = 14;
@@ -195,7 +195,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(15, 268);
+            this.label6.Location = new System.Drawing.Point(15, 256);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(196, 18);
             this.label6.TabIndex = 15;
@@ -273,7 +273,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat Light", 9.449999F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(15, 298);
+            this.label7.Location = new System.Drawing.Point(15, 286);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(206, 18);
             this.label7.TabIndex = 23;

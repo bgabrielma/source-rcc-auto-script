@@ -151,7 +151,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(130, 14);
             this.label16.TabIndex = 16;
-            this.label16.Text = "06 de setembro de 2018";
+            this.label16.Text = "07 de setembro de 2018";
             // 
             // label15
             // 
@@ -179,9 +179,9 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(51, 75);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 15);
+            this.label13.Size = new System.Drawing.Size(22, 15);
             this.label13.TabIndex = 13;
-            this.label13.Text = "1.3";
+            this.label13.Text = "1.4";
             // 
             // label14
             // 
@@ -604,6 +604,7 @@
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.WaitOnLoad = true;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // panel1
             // 

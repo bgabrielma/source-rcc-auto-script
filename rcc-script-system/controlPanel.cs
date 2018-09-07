@@ -334,8 +334,7 @@ namespace rcc_script_system
                 btnStart.Enabled = true;
                 btnReset.Enabled = false;
                 activePart = 1;
-                MessageBox.Show("Este tópico foi finalizado com sucesso!",
-                   "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                showEndTopicNotification();
                 return "";
             }
         }
@@ -372,6 +371,13 @@ namespace rcc_script_system
         {
             rccNotify.BalloonTipTitle = "Atenção, " + this.nameRCC;
             rccNotify.BalloonTipText = "O script foi pausado com sucesso!";
+            rccNotify.ShowBalloonTip(6000);
+        }
+
+        public void showEndTopicNotification()
+        {
+            rccNotify.BalloonTipTitle = "Atenção, " + this.nameRCC;
+            rccNotify.BalloonTipText = "Este tópico foi finalizado com sucesso!";
             rccNotify.ShowBalloonTip(6000);
         }
 
