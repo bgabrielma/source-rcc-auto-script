@@ -60,6 +60,7 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.timerScript = new System.Windows.Forms.Timer(this.components);
             this.btnContinue = new System.Windows.Forms.Button();
+            this.rccNotify = new System.Windows.Forms.NotifyIcon(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
@@ -452,6 +453,13 @@
             this.btnContinue.UseVisualStyleBackColor = true;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
+            // rccNotify
+            // 
+            this.rccNotify.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.rccNotify.Icon = ((System.Drawing.Icon)(resources.GetObject("rccNotify.Icon")));
+            this.rccNotify.Text = "notifyIcon1";
+            this.rccNotify.Visible = true;
+            // 
             // controlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,6 +489,7 @@
             this.Name = "controlPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "controlPanel";
+            this.Load += new System.EventHandler(this.controlPanel_Load);
             this.Shown += new System.EventHandler(this.controlPanel_Shown);
             this.Leave += new System.EventHandler(this.controlPanel_Leave);
             this.panel1.ResumeLayout(false);
@@ -530,5 +539,6 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Timer timerScript;
         private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.NotifyIcon rccNotify;
     }
 }

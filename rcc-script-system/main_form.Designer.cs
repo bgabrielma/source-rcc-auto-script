@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_form));
             this.main_content = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -67,18 +72,13 @@
             this.importFile = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.about = new System.Windows.Forms.PictureBox();
+            this.min = new System.Windows.Forms.PictureBox();
+            this.close = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.txtFileUpload = new System.Windows.Forms.OpenFileDialog();
-            this.min = new System.Windows.Forms.PictureBox();
-            this.close = new System.Windows.Forms.PictureBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.about = new System.Windows.Forms.PictureBox();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.main_content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -87,10 +87,10 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.about)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.about)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // main_content
@@ -122,6 +122,55 @@
             this.main_content.TabIndex = 0;
             this.main_content.Paint += new System.Windows.Forms.PaintEventHandler(this.main_content_Paint);
             this.main_content.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(141)))), ((int)(((byte)(252)))));
+            this.panel11.Location = new System.Drawing.Point(379, 430);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(125, 1);
+            this.panel11.TabIndex = 7;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(376, 432);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(119, 15);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "Ultima atualização:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Montserrat Light", 7.349999F);
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(376, 447);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(130, 14);
+            this.label16.TabIndex = 16;
+            this.label16.Text = "06 de setembro de 2018";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Montserrat Light", 7.349999F);
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(12, 75);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(42, 14);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Versão:";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(141)))), ((int)(((byte)(252)))));
+            this.panel10.Location = new System.Drawing.Point(15, 92);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(55, 1);
+            this.panel10.TabIndex = 14;
             // 
             // label13
             // 
@@ -485,7 +534,7 @@
             this.button1.Location = new System.Drawing.Point(52, 249);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 35);
+            this.button1.Size = new System.Drawing.Size(104, 35);
             this.button1.TabIndex = 6;
             this.button1.TabStop = false;
             this.button1.Text = "Gerar script";
@@ -571,36 +620,29 @@
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown_1);
             // 
-            // label1
+            // panel12
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Light", 13F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(65, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "RCC - Ferramenta de aulas";
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(141)))), ((int)(((byte)(252)))));
+            this.panel12.Location = new System.Drawing.Point(638, 8);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(2, 35);
+            this.panel12.TabIndex = 18;
             // 
-            // pictureBox3
+            // about
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(18, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(39, 39);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.WaitOnLoad = true;
-            // 
-            // txtFileUpload
-            // 
-            this.txtFileUpload.FileName = "txtFileUpload";
-            this.txtFileUpload.Filter = "|*.txt";
+            this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.about.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.about.Image = ((System.Drawing.Image)(resources.GetObject("about.Image")));
+            this.about.InitialImage = ((System.Drawing.Image)(resources.GetObject("about.InitialImage")));
+            this.about.Location = new System.Drawing.Point(590, 10);
+            this.about.Name = "about";
+            this.about.Padding = new System.Windows.Forms.Padding(2);
+            this.about.Size = new System.Drawing.Size(32, 32);
+            this.about.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.about.TabIndex = 6;
+            this.about.TabStop = false;
+            this.about.WaitOnLoad = true;
+            this.about.Click += new System.EventHandler(this.about_Click);
             // 
             // min
             // 
@@ -637,78 +679,36 @@
             this.close.MouseLeave += new System.EventHandler(this.close_MouseLeave);
             this.close.MouseHover += new System.EventHandler(this.close_MouseHover);
             // 
-            // panel10
+            // label1
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(141)))), ((int)(((byte)(252)))));
-            this.panel10.Location = new System.Drawing.Point(15, 92);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(55, 1);
-            this.panel10.TabIndex = 14;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Montserrat Light", 13F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(65, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(252, 25);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "RCC - Ferramenta de aulas";
             // 
-            // label15
+            // pictureBox3
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Montserrat Light", 7.349999F);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(12, 75);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 14);
-            this.label15.TabIndex = 15;
-            this.label15.Text = "Versão:";
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(18, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.WaitOnLoad = true;
             // 
-            // label16
+            // txtFileUpload
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Montserrat Light", 7.349999F);
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(376, 447);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(130, 14);
-            this.label16.TabIndex = 16;
-            this.label16.Text = "06 de setembro de 2018";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(376, 432);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 15);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "Ultima atualização:";
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(141)))), ((int)(((byte)(252)))));
-            this.panel11.Location = new System.Drawing.Point(379, 430);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(125, 1);
-            this.panel11.TabIndex = 7;
-            // 
-            // about
-            // 
-            this.about.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.about.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.about.Image = ((System.Drawing.Image)(resources.GetObject("about.Image")));
-            this.about.InitialImage = ((System.Drawing.Image)(resources.GetObject("about.InitialImage")));
-            this.about.Location = new System.Drawing.Point(590, 10);
-            this.about.Name = "about";
-            this.about.Padding = new System.Windows.Forms.Padding(2);
-            this.about.Size = new System.Drawing.Size(32, 32);
-            this.about.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.about.TabIndex = 6;
-            this.about.TabStop = false;
-            this.about.WaitOnLoad = true;
-            this.about.Click += new System.EventHandler(this.about_Click);
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(141)))), ((int)(((byte)(252)))));
-            this.panel12.Location = new System.Drawing.Point(638, 8);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(2, 35);
-            this.panel12.TabIndex = 18;
+            this.txtFileUpload.FileName = "txtFileUpload";
+            this.txtFileUpload.Filter = "|*.txt";
             // 
             // main_form
             // 
@@ -734,10 +734,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.about)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.about)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }

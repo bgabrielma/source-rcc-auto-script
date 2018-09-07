@@ -302,9 +302,7 @@ namespace rcc_script_system
                 Button btn = new Button();
                 btn.Click += btnPause_Click;
                 btn.PerformClick();
-
-                WindowState = FormWindowState.Normal;
-                MessageBox.Show("Script parado com sucesso!");
+                showStopNotification();
             }
 
             activePart++;
@@ -368,6 +366,21 @@ namespace rcc_script_system
         private void controlPanel_Leave(object sender, EventArgs e)
         {
 
+        }
+
+        public void showStopNotification()
+        {
+            rccNotify.Text = "My applicaiton";
+            rccNotify.BalloonTipTitle = "Atenção, " + this.nameRCC;
+            rccNotify.BalloonTipText = "O script foi pausado com sucesso!";
+            rccNotify.ShowBalloonTip(6000);
+        }
+
+        private void controlPanel_Load(object sender, EventArgs e)
+        {
+            rccNotify.BalloonTipTitle = "Bem vindo, " + this.nameRCC;
+            rccNotify.BalloonTipText = "Desfrute do programa e seja feliz";
+            rccNotify.ShowBalloonTip(6000);
         }
     }
 }

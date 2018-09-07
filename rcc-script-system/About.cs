@@ -24,7 +24,6 @@ namespace rcc_script_system
         const int WM_NCLBUTTONDOWN = 0xA1;
         const int HT_CAPTION = 0x2;  //this indicates that the action takes place on the title bar
 
-
         private void Move_window(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
