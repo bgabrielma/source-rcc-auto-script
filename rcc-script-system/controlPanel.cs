@@ -352,19 +352,9 @@ namespace rcc_script_system
                 .Replace("]", "{]}");
         }
 
-        private void preview_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void min_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private void controlPanel_Leave(object sender, EventArgs e)
-        {
-
         }
 
         public void showStopNotification()

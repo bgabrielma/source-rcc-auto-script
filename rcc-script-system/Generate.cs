@@ -27,8 +27,6 @@ namespace rcc_script_system
             MouseDown += new MouseEventHandler(Move_window); // binding the method to the event
             InitializeComponent();
             inicialConfiguration();
-
-
         }
 
         public void inicialConfiguration()

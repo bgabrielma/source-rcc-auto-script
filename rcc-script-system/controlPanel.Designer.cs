@@ -238,7 +238,6 @@
             this.preview.Size = new System.Drawing.Size(704, 468);
             this.preview.TabIndex = 6;
             this.preview.Text = "RCC - Painel de controle auto-script";
-            this.preview.TextChanged += new System.EventHandler(this.preview_TextChanged);
             // 
             // panel3
             // 
@@ -491,7 +490,6 @@
             this.Text = "[RCC] - Painel de controle";
             this.Load += new System.EventHandler(this.controlPanel_Load);
             this.Shown += new System.EventHandler(this.controlPanel_Shown);
-            this.Leave += new System.EventHandler(this.controlPanel_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
