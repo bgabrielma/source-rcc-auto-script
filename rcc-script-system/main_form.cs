@@ -187,7 +187,6 @@ namespace rcc_script_system
             string contentByLine = string.Empty;
             readerFiles = new StreamReader(file.FileName, Encoding.GetEncoding("iso-8859-1"));
             infoFileName.Text = txtFileUpload.SafeFileName;
-            MessageBox.Show(Properties.SettingsRCC.Default.user);
 
             //read line by line and separate according to regex's function
 
