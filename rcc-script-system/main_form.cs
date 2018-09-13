@@ -181,9 +181,13 @@ namespace rcc_script_system
 
         public void updateInfosAndFillLists(OpenFileDialog file)
         {
+            titles.Clear();
+            comments.Clear();
+            lines.Clear();
             string contentByLine = string.Empty;
             readerFiles = new StreamReader(file.FileName, Encoding.GetEncoding("iso-8859-1"));
             infoFileName.Text = txtFileUpload.SafeFileName;
+            MessageBox.Show(Properties.SettingsRCC.Default.user);
 
             //read line by line and separate according to regex's function
 
@@ -195,7 +199,7 @@ namespace rcc_script_system
                 }
                 if (MAIN_TITLE_TOKEN.IsMatch(contentByLine))
                 {
-                    lines.Add(new Line(contentByLine.Replace(">", "").Replace("[Nick]", nickRCC.Text).Replace("[TAG]", fixTAG(tagRCCIdentification.Text)), titles.Count));
+                    lines.Add(new Line(contentByLine.Replace(">", "").Replace("[Nick]", Properties.SettingsRCC.Default.user.ToString()).Replace("[TAG]", fixTAG(Properties.SettingsRCC.Default.tag.ToString())), titles.Count));
                 }
                 if (COMMENT_TOKEN.IsMatch(contentByLine))
                 {
@@ -250,7 +254,6 @@ namespace rcc_script_system
             tagRCC = tagRCCIdentification.Text;
 
             var error = 0;
-            setProperties();
 
             if (nameRCC == string.Empty)
             {
@@ -284,6 +287,11 @@ namespace rcc_script_system
             }
 
             // open controlPanel's form
+            setProperties();
+
+            //update infos
+            updateInfosAndFillLists(txtFileUpload);
+
             controlPanel form = new controlPanel(openFile, titles, comments, lines, nameScript, nameRCC, tagRCC);
 
             if (error == 0)
