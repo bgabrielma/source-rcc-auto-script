@@ -331,6 +331,7 @@
             this.Name = "About";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "About";
+            this.Load += new System.EventHandler(this.About_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.About_Paint);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.About_MouseDown);
             this.panel1.ResumeLayout(false);

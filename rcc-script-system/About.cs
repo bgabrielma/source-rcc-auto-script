@@ -72,5 +72,10 @@ namespace rcc_script_system
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void About_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
