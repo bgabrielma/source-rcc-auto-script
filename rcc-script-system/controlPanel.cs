@@ -334,20 +334,8 @@ namespace rcc_script_system
                 btnStart.Enabled = true;
                 btnReset.Enabled = false;
                 activePart = 1;
-
-                // get actual index of topicCombo
-                var actualTopic = topicCombo.SelectedIndex;
-                try
-                {
-                    showEndTopicNotification();
-                    topicCombo.SelectedIndex++;
-                }
-                catch(Exception)
-                {
-                    topicCombo.SelectedIndex = actualTopic;
-                }
-
-                return null;
+                nextTopic();
+                return "";
             }
         }
 
@@ -369,10 +357,30 @@ namespace rcc_script_system
             WindowState = FormWindowState.Minimized;
         }
 
+        public void nextTopic()
+        {
+            try
+            {
+                topicCombo.SelectedIndex++;
+                showEndTopicNotification();
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                showEndOfScript();
+            }
+        }
+
         public void showStopNotification()
         {
             rccNotify.BalloonTipTitle = "Atenção, " + this.nameRCC;
             rccNotify.BalloonTipText = "O script foi pausado com sucesso!";
+            rccNotify.ShowBalloonTip(6000);
+        }
+
+        public void showEndOfScript()
+        {
+            rccNotify.BalloonTipTitle = "Parabéns, " + this.nameRCC;
+            rccNotify.BalloonTipText = "Terminou a sua aula com sucesso!";
             rccNotify.ShowBalloonTip(6000);
         }
 
