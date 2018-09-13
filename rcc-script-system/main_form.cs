@@ -250,8 +250,9 @@ namespace rcc_script_system
             tagRCC = tagRCCIdentification.Text;
 
             var error = 0;
+            setProperties();
 
-            if(nameRCC == string.Empty)
+            if (nameRCC == string.Empty)
             {
                 nickRCC.ForeColor = Color.Red;
                 error = 1;
@@ -287,7 +288,6 @@ namespace rcc_script_system
 
             if (error == 0)
             {
-                setProperties();
                 form.Show();
             }
         }

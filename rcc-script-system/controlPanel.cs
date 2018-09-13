@@ -334,8 +334,20 @@ namespace rcc_script_system
                 btnStart.Enabled = true;
                 btnReset.Enabled = false;
                 activePart = 1;
-                showEndTopicNotification();
-                return "";
+
+                // get actual index of topicCombo
+                var actualTopic = topicCombo.SelectedIndex;
+                try
+                {
+                    showEndTopicNotification();
+                    topicCombo.SelectedIndex++;
+                }
+                catch(Exception)
+                {
+                    topicCombo.SelectedIndex = actualTopic;
+                }
+
+                return null;
             }
         }
 
