@@ -275,7 +275,6 @@ namespace rcc_script_system
                 tagRCCIdentification.ForeColor = Color.Black;
             }
 
-
             // verify if controlPanel's Form is active
             Form controlPanel = Application.OpenForms["controlPanel"];
             if (controlPanel != null)
