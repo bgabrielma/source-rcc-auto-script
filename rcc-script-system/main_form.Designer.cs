@@ -149,9 +149,9 @@
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(376, 447);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(122, 13);
+            this.label16.Size = new System.Drawing.Size(117, 13);
             this.label16.TabIndex = 16;
-            this.label16.Text = "13 de setembro de 2018";
+            this.label16.Text = "04 de Outubro de 2018";
             // 
             // label15
             // 
