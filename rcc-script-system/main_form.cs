@@ -284,7 +284,7 @@ namespace rcc_script_system
                     "Ocorreu um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+  
             if (titles.Count == 0 || lines.Count == 0)
             {
                 MessageBox.Show("O script inserido no programa é inválido! - Reveja o ficheiro e tente novamente.",
