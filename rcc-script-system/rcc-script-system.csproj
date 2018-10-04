@@ -51,10 +51,11 @@
     <LangVersion>7.1</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>B4C13DF3EF7B176C723EF7863F9EED099ABCB005</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>657B87529DF4EA12980F2B7612C2F6AD604C018D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>rcc-script-system_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -146,7 +147,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="rcc-script-system_TemporaryKey.pfx" />
     <None Include="Properties\SettingsRCC.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>SettingsRCC.Designer.cs</LastGenOutput>
