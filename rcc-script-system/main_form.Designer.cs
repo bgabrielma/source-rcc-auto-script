@@ -225,9 +225,9 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(68, 424);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 15);
+            this.label12.Size = new System.Drawing.Size(125, 15);
             this.label12.TabIndex = 9;
-            this.label12.Text = "Criador por: ,SrGabriel";
+            this.label12.Text = "Criado por: ,SrGabriel";
             // 
             // pictureBox7
             // 
