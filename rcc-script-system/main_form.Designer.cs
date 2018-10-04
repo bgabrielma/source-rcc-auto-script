@@ -134,33 +134,33 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(376, 432);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(119, 15);
+            this.label17.Size = new System.Drawing.Size(115, 13);
             this.label17.TabIndex = 17;
             this.label17.Text = "Ultima atualização:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Montserrat Light", 7.349999F);
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.349999F);
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(376, 447);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(127, 14);
+            this.label16.Size = new System.Drawing.Size(122, 13);
             this.label16.TabIndex = 16;
             this.label16.Text = "13 de setembro de 2018";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Montserrat Light", 7.349999F);
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.349999F);
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(12, 75);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 14);
+            this.label15.Size = new System.Drawing.Size(43, 13);
             this.label15.TabIndex = 15;
             this.label15.Text = "Versão:";
             // 
@@ -169,39 +169,39 @@
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(141)))), ((int)(((byte)(252)))));
             this.panel10.Location = new System.Drawing.Point(15, 92);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(55, 1);
+            this.panel10.Size = new System.Drawing.Size(70, 1);
             this.panel10.TabIndex = 14;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Montserrat", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(51, 75);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(21, 15);
+            this.label13.Size = new System.Drawing.Size(36, 13);
             this.label13.TabIndex = 13;
-            this.label13.Text = "1.5";
+            this.label13.Text = "1.5.1";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Montserrat Light", 8.749999F);
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.749999F);
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(583, 446);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(156, 17);
+            this.label14.Size = new System.Drawing.Size(150, 15);
             this.label14.TabIndex = 12;
             this.label14.Text = " Idealização: Dean.Santos";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Montserrat Light", 8.749999F);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.749999F);
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(68, 442);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(215, 17);
+            this.label10.Size = new System.Drawing.Size(203, 15);
             this.label10.TabIndex = 11;
             this.label10.Text = "Colaboração: Equipe Técnica - RCC";
             // 
@@ -221,11 +221,11 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Montserrat Light", 8.749999F);
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.749999F);
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(68, 424);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(136, 17);
+            this.label12.Size = new System.Drawing.Size(129, 15);
             this.label12.TabIndex = 9;
             this.label12.Text = "Criador por: ,SrGabriel";
             // 
@@ -285,51 +285,51 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(159, 270);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 18);
+            this.label9.Size = new System.Drawing.Size(110, 16);
             this.label9.TabIndex = 22;
             this.label9.Text = "Facultativo: \"[\" \"]\"";
             // 
             // tagRCCIdentification
             // 
-            this.tagRCCIdentification.Font = new System.Drawing.Font("Montserrat Light", 9.549999F);
+            this.tagRCCIdentification.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.549999F);
             this.tagRCCIdentification.Location = new System.Drawing.Point(92, 267);
             this.tagRCCIdentification.MaxLength = 5;
             this.tagRCCIdentification.Name = "tagRCCIdentification";
-            this.tagRCCIdentification.Size = new System.Drawing.Size(61, 23);
+            this.tagRCCIdentification.Size = new System.Drawing.Size(61, 22);
             this.tagRCCIdentification.TabIndex = 21;
             // 
             // nickRCC
             // 
-            this.nickRCC.Font = new System.Drawing.Font("Montserrat Light", 9.549999F);
+            this.nickRCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.549999F);
             this.nickRCC.Location = new System.Drawing.Point(92, 239);
             this.nickRCC.MaxLength = 40;
             this.nickRCC.Name = "nickRCC";
-            this.nickRCC.Size = new System.Drawing.Size(186, 23);
+            this.nickRCC.Size = new System.Drawing.Size(186, 22);
             this.nickRCC.TabIndex = 20;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(47, 267);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(39, 18);
+            this.label7.Size = new System.Drawing.Size(43, 16);
             this.label7.TabIndex = 19;
             this.label7.Text = "TAG:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(44, 239);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(42, 18);
+            this.label5.Size = new System.Drawing.Size(43, 16);
             this.label5.TabIndex = 18;
             this.label5.Text = "Nick:";
             // 
@@ -343,7 +343,7 @@
             this.btnControlPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnControlPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnControlPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControlPanel.Font = new System.Drawing.Font("Montserrat Light", 9.25F);
+            this.btnControlPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnControlPanel.ForeColor = System.Drawing.Color.Black;
             this.btnControlPanel.Location = new System.Drawing.Point(19, 305);
             this.btnControlPanel.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
@@ -359,44 +359,44 @@
             // linesAmount
             // 
             this.linesAmount.AutoSize = true;
-            this.linesAmount.Font = new System.Drawing.Font("Montserrat Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linesAmount.ForeColor = System.Drawing.Color.Black;
             this.linesAmount.Location = new System.Drawing.Point(101, 197);
             this.linesAmount.Name = "linesAmount";
-            this.linesAmount.Size = new System.Drawing.Size(18, 18);
+            this.linesAmount.Size = new System.Drawing.Size(16, 16);
             this.linesAmount.TabIndex = 16;
             this.linesAmount.Text = "--";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(39, 197);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 18);
+            this.label11.Size = new System.Drawing.Size(60, 16);
             this.label11.TabIndex = 15;
             this.label11.Text = "Frases:";
             // 
             // titlesAmount
             // 
             this.titlesAmount.AutoSize = true;
-            this.titlesAmount.Font = new System.Drawing.Font("Montserrat Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titlesAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titlesAmount.ForeColor = System.Drawing.Color.Black;
             this.titlesAmount.Location = new System.Drawing.Point(101, 172);
             this.titlesAmount.Name = "titlesAmount";
-            this.titlesAmount.Size = new System.Drawing.Size(18, 18);
+            this.titlesAmount.Size = new System.Drawing.Size(16, 16);
             this.titlesAmount.TabIndex = 14;
             this.titlesAmount.Text = "--";
             // 
             // Titulos
             // 
             this.Titulos.AutoSize = true;
-            this.Titulos.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Titulos.ForeColor = System.Drawing.Color.Black;
             this.Titulos.Location = new System.Drawing.Point(37, 172);
             this.Titulos.Name = "Titulos";
-            this.Titulos.Size = new System.Drawing.Size(58, 18);
+            this.Titulos.Size = new System.Drawing.Size(59, 16);
             this.Titulos.TabIndex = 13;
             this.Titulos.Text = "Títulos:";
             // 
@@ -411,55 +411,55 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(29, 133);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 18);
+            this.label8.Size = new System.Drawing.Size(82, 16);
             this.label8.TabIndex = 11;
             this.label8.Text = "Contagem:\r\n";
             // 
             // scriptName
             // 
             this.scriptName.AutoSize = true;
-            this.scriptName.Font = new System.Drawing.Font("Montserrat Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scriptName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scriptName.ForeColor = System.Drawing.Color.Black;
             this.scriptName.Location = new System.Drawing.Point(105, 94);
             this.scriptName.Name = "scriptName";
-            this.scriptName.Size = new System.Drawing.Size(18, 18);
+            this.scriptName.Size = new System.Drawing.Size(16, 16);
             this.scriptName.TabIndex = 10;
             this.scriptName.Text = "--";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(19, 93);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 18);
+            this.label6.Size = new System.Drawing.Size(88, 16);
             this.label6.TabIndex = 9;
             this.label6.Text = "Aula/Curso:";
             // 
             // infoFileName
             // 
             this.infoFileName.AutoSize = true;
-            this.infoFileName.Font = new System.Drawing.Font("Montserrat Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoFileName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.infoFileName.ForeColor = System.Drawing.Color.Black;
             this.infoFileName.Location = new System.Drawing.Point(105, 65);
             this.infoFileName.Name = "infoFileName";
-            this.infoFileName.Size = new System.Drawing.Size(18, 18);
+            this.infoFileName.Size = new System.Drawing.Size(16, 16);
             this.infoFileName.TabIndex = 8;
             this.infoFileName.Text = "--";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(39, 66);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 18);
+            this.label4.Size = new System.Drawing.Size(68, 16);
             this.label4.TabIndex = 7;
             this.label4.Text = "Ficheiro:";
             // 
@@ -474,11 +474,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(29, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 18);
+            this.label3.Size = new System.Drawing.Size(174, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Informações do ficheiro:\r\n";
             // 
@@ -529,7 +529,7 @@
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat Light", 9.25F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(52, 249);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
@@ -561,11 +561,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(30, 125);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 54);
+            this.label2.Size = new System.Drawing.Size(138, 48);
             this.label2.TabIndex = 4;
             this.label2.Text = "Importe o seu script \r\nFicheiro suportado: txt\r\n\r\n";
             // 
@@ -578,7 +578,7 @@
             this.importFile.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.importFile.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.importFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.importFile.Font = new System.Drawing.Font("Montserrat Light", 9.25F);
+            this.importFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.importFile.ForeColor = System.Drawing.Color.Black;
             this.importFile.Location = new System.Drawing.Point(54, 198);
             this.importFile.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
@@ -683,11 +683,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Light", 13F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(65, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(252, 25);
+            this.label1.Size = new System.Drawing.Size(230, 22);
             this.label1.TabIndex = 3;
             this.label1.Text = "RCC - Ferramenta de aulas";
             // 
