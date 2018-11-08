@@ -63,6 +63,16 @@ namespace rcc_aulador_v2_metrodesign_master.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _123 {
+            get {
+                object obj = ResourceManager.GetObject("123", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap black_divider_png_7 {
             get {
                 object obj = ResourceManager.GetObject("black-divider-png-7", resourceCulture);
@@ -76,6 +86,46 @@ namespace rcc_aulador_v2_metrodesign_master.Properties {
         internal static System.Drawing.Bitmap logorcc {
             get {
                 object obj = ResourceManager.GetObject("logorcc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logorcc_com_sombra {
+            get {
+                object obj = ResourceManager.GetObject("logorcc-com-sombra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logorcc_melhorada {
+            get {
+                object obj = ResourceManager.GetObject("logorcc-melhorada", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sem_Título_1 {
+            get {
+                object obj = ResourceManager.GetObject("Sem-Título-1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sem_Título_11 {
+            get {
+                object obj = ResourceManager.GetObject("Sem-Título-11", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

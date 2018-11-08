@@ -96,5 +96,20 @@
   <ItemGroup>
     <None Include="Resources\black-divider-png-7.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem-Título-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sem-Título-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logorcc-com-sombra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logorcc-melhorada.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
