@@ -7,14 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/**
+ *  @MetroFramework's imports
+ * */
+using MetroFramework.Forms;
 
 namespace rcc_aulador_v2_metrodesign_master
 {
-    public partial class Form1 : Form
+    public partial class Main : MetroForm
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroProgressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
