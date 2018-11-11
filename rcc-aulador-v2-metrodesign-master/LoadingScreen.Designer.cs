@@ -1,6 +1,6 @@
 ﻿namespace rcc_aulador_v2_metrodesign_master
 {
-    partial class Main
+    partial class LoadingScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroProgressSpinner1 = new MetroFramework.Controls.MetroProgressSpinner();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox2
+            // 
+            this.metroStyleExtender1.SetApplyMetroTheme(this.pictureBox2, true);
+            this.pictureBox2.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.black_divider_png_7;
+            this.pictureBox2.Location = new System.Drawing.Point(133, 143);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(301, 22);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
             // 
             // metroLabel1
             // 
@@ -70,7 +81,6 @@
             this.metroProgressBar1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroProgressBar1.TabIndex = 5;
             this.metroProgressBar1.Value = 50;
-            this.metroProgressBar1.Click += new System.EventHandler(this.metroProgressBar1_Click);
             // 
             // metroLabel3
             // 
@@ -81,17 +91,6 @@
             this.metroLabel3.Size = new System.Drawing.Size(149, 15);
             this.metroLabel3.TabIndex = 6;
             this.metroLabel3.Text = "Desenvolvido por: ,SrGabriel";
-            // 
-            // pictureBox2
-            // 
-            this.metroStyleExtender1.SetApplyMetroTheme(this.pictureBox2, true);
-            this.pictureBox2.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.black_divider_png_7;
-            this.pictureBox2.Location = new System.Drawing.Point(133, 143);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(301, 22);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -115,7 +114,7 @@
             this.metroProgressSpinner1.UseSelectable = true;
             this.metroProgressSpinner1.Value = 35;
             // 
-            // Main
+            // LoadingScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -129,11 +128,10 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.MaximizeBox = false;
-            this.Name = "Main";
+            this.Name = "LoadingScreen";
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.Load += new System.EventHandler(this.Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
