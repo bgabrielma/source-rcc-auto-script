@@ -97,6 +97,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorEnumPT.cs" />
     <Compile Include="ControlForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +217,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoRCC-strog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notifications-button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Loading_icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\import %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\engineer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

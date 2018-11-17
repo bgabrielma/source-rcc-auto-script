@@ -28,21 +28,23 @@ namespace rcc_aulador_v2_metrodesign_master
 
         private async void startProcess_OpenForm()
         {
-            await Task.Run(() => Thread.Sleep(2000));
+            await Task.Run(() => Thread.Sleep(1500));
             startProcess();
         }
 
         public void startProcess()
         {
+            Opacity = 0;
+            ShowInTaskbar = false;
             th = new Thread(openControl_Form);
-            Dispose();
             th.SetApartmentState(ApartmentState.STA);
             th.Start();
         }
 
         public void openControl_Form(object obj)
         {
-            Application.Run(new ControlForm());
+            ControlForm x = new ControlForm();
+            x.ShowDialog();
             th.Abort();
         }
     }
