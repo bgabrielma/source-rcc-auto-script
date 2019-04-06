@@ -30,12 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(controlPanel));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.ControlTitle = new System.Windows.Forms.Label();
             this.min = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelDadosMilitar = new System.Windows.Forms.Panel();
             this.rcc_user = new System.Windows.Forms.PictureBox();
             this.rcc_user_tag = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -60,40 +61,54 @@
             this.timerScript = new System.Windows.Forms.Timer(this.components);
             this.btnContinue = new System.Windows.Forms.Button();
             this.rccNotify = new System.Windows.Forms.NotifyIcon(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.panelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.panelDadosMilitar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rcc_user)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelControl
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(81)))), ((int)(((byte)(89)))));
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.min);
-            this.panel1.Controls.Add(this.close);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1048, 49);
-            this.panel1.TabIndex = 1;
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            this.panelControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(81)))), ((int)(((byte)(89)))));
+            this.panelControl.Controls.Add(this.pictureBox3);
+            this.panelControl.Controls.Add(this.ControlTitle);
+            this.panelControl.Controls.Add(this.min);
+            this.panelControl.Controls.Add(this.close);
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl.Location = new System.Drawing.Point(0, 0);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(1048, 49);
+            this.panelControl.TabIndex = 1;
+            this.panelControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // label1
+            // pictureBox3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat Light", 13F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(65, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 25);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "RCC - Painel de controle";
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, -11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.WaitOnLoad = true;
+            // 
+            // ControlTitle
+            // 
+            this.ControlTitle.AutoSize = true;
+            this.ControlTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.ControlTitle.ForeColor = System.Drawing.Color.White;
+            this.ControlTitle.Location = new System.Drawing.Point(65, 10);
+            this.ControlTitle.Name = "ControlTitle";
+            this.ControlTitle.Size = new System.Drawing.Size(60, 22);
+            this.ControlTitle.TabIndex = 3;
+            this.ControlTitle.Text = "RCC -";
             // 
             // min
             // 
@@ -134,20 +149,20 @@
             this.panel4.Size = new System.Drawing.Size(1048, 5);
             this.panel4.TabIndex = 4;
             // 
-            // panel2
+            // panelDadosMilitar
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(81)))), ((int)(((byte)(89)))));
-            this.panel2.Controls.Add(this.rcc_user);
-            this.panel2.Controls.Add(this.rcc_user_tag);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.rcc_user_name);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(757, 81);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(279, 109);
-            this.panel2.TabIndex = 5;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panelDadosMilitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(81)))), ((int)(((byte)(89)))));
+            this.panelDadosMilitar.Controls.Add(this.rcc_user);
+            this.panelDadosMilitar.Controls.Add(this.rcc_user_tag);
+            this.panelDadosMilitar.Controls.Add(this.label6);
+            this.panelDadosMilitar.Controls.Add(this.rcc_user_name);
+            this.panelDadosMilitar.Controls.Add(this.label4);
+            this.panelDadosMilitar.Controls.Add(this.label3);
+            this.panelDadosMilitar.Location = new System.Drawing.Point(757, 81);
+            this.panelDadosMilitar.Name = "panelDadosMilitar";
+            this.panelDadosMilitar.Size = new System.Drawing.Size(279, 109);
+            this.panelDadosMilitar.TabIndex = 5;
+            this.panelDadosMilitar.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // rcc_user
             // 
@@ -161,62 +176,62 @@
             // rcc_user_tag
             // 
             this.rcc_user_tag.AutoSize = true;
-            this.rcc_user_tag.Font = new System.Drawing.Font("Montserrat Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rcc_user_tag.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rcc_user_tag.ForeColor = System.Drawing.Color.White;
             this.rcc_user_tag.Location = new System.Drawing.Point(166, 69);
             this.rcc_user_tag.Name = "rcc_user_tag";
-            this.rcc_user_tag.Size = new System.Drawing.Size(39, 18);
+            this.rcc_user_tag.Size = new System.Drawing.Size(39, 16);
             this.rcc_user_tag.TabIndex = 14;
             this.rcc_user_tag.Text = "[SrG]";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(121, 69);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 18);
+            this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 13;
             this.label6.Text = "TAG:";
             // 
             // rcc_user_name
             // 
             this.rcc_user_name.AutoSize = true;
-            this.rcc_user_name.Font = new System.Drawing.Font("Montserrat Light", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rcc_user_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rcc_user_name.ForeColor = System.Drawing.Color.White;
             this.rcc_user_name.Location = new System.Drawing.Point(166, 41);
             this.rcc_user_name.Name = "rcc_user_name";
-            this.rcc_user_name.Size = new System.Drawing.Size(70, 18);
+            this.rcc_user_name.Size = new System.Drawing.Size(68, 16);
             this.rcc_user_name.TabIndex = 12;
             this.rcc_user_name.Text = ",SrGabriel";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(118, 41);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 18);
+            this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 11;
             this.label4.Text = "Nick:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat Medium", 13F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(111, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 25);
+            this.label3.Size = new System.Drawing.Size(144, 22);
             this.label3.TabIndex = 7;
             this.label3.Text = "Dados do militar:";
             // 
             // preview
             // 
             this.preview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.preview.Font = new System.Drawing.Font("Montserrat Light", 8.75F);
+            this.preview.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
             this.preview.Location = new System.Drawing.Point(27, 137);
             this.preview.Name = "preview";
             this.preview.ReadOnly = true;
@@ -237,22 +252,22 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Montserrat Medium", 13F);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(20, 10);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(207, 25);
+            this.label9.Size = new System.Drawing.Size(184, 22);
             this.label9.TabIndex = 7;
             this.label9.Text = "Apresentação parcial:";
             // 
             // topicCombo
             // 
             this.topicCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.topicCombo.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F);
+            this.topicCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.topicCombo.FormattingEnabled = true;
             this.topicCombo.Location = new System.Drawing.Point(758, 294);
             this.topicCombo.Name = "topicCombo";
-            this.topicCombo.Size = new System.Drawing.Size(205, 26);
+            this.topicCombo.Size = new System.Drawing.Size(205, 24);
             this.topicCombo.TabIndex = 8;
             this.topicCombo.SelectedIndexChanged += new System.EventHandler(this.topicCombo_SelectedIndexChanged);
             // 
@@ -260,11 +275,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label2.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(755, 256);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 18);
+            this.label2.Size = new System.Drawing.Size(134, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Selecionar tópico:";
             // 
@@ -288,22 +303,22 @@
             // 
             this.label5.AutoSize = true;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label5.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(755, 347);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 18);
+            this.label5.Size = new System.Drawing.Size(92, 16);
             this.label5.TabIndex = 12;
             this.label5.Text = "Velocidade:";
             // 
             // speedCombo
             // 
             this.speedCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.speedCombo.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F);
+            this.speedCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F);
             this.speedCombo.FormattingEnabled = true;
             this.speedCombo.Location = new System.Drawing.Point(758, 385);
             this.speedCombo.Name = "speedCombo";
-            this.speedCombo.Size = new System.Drawing.Size(126, 26);
+            this.speedCombo.Size = new System.Drawing.Size(126, 24);
             this.speedCombo.TabIndex = 14;
             this.speedCombo.SelectedIndexChanged += new System.EventHandler(this.speedCombo_SelectedIndexChanged);
             // 
@@ -316,7 +331,7 @@
             this.btnStart.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnStart.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStart.Font = new System.Drawing.Font("Montserrat Light", 9.25F);
+            this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnStart.ForeColor = System.Drawing.Color.Black;
             this.btnStart.Location = new System.Drawing.Point(757, 462);
             this.btnStart.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
@@ -338,7 +353,7 @@
             this.btnPause.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnPause.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPause.Font = new System.Drawing.Font("Montserrat Medium", 9.25F);
+            this.btnPause.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnPause.ForeColor = System.Drawing.Color.Black;
             this.btnPause.Location = new System.Drawing.Point(757, 519);
             this.btnPause.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
@@ -363,11 +378,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label7.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(755, 425);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(63, 18);
+            this.label7.Size = new System.Drawing.Size(66, 16);
             this.label7.TabIndex = 21;
             this.label7.Text = "Opções:";
             // 
@@ -378,7 +393,7 @@
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(24)))), ((int)(((byte)(37)))));
             this.button2.FlatAppearance.BorderSize = 2;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Montserrat Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(758, 200);
             this.button2.Name = "button2";
@@ -397,7 +412,7 @@
             this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Montserrat Light", 9.25F);
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnReset.ForeColor = System.Drawing.Color.Black;
             this.btnReset.Location = new System.Drawing.Point(757, 579);
             this.btnReset.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
@@ -424,7 +439,7 @@
             this.btnContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContinue.Font = new System.Drawing.Font("Montserrat Light", 9.25F);
+            this.btnContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F);
             this.btnContinue.ForeColor = System.Drawing.Color.Black;
             this.btnContinue.Location = new System.Drawing.Point(881, 462);
             this.btnContinue.Margin = new System.Windows.Forms.Padding(3, 3, 3, 4);
@@ -443,21 +458,6 @@
             this.rccNotify.Icon = ((System.Drawing.Icon)(resources.GetObject("rccNotify.Icon")));
             this.rccNotify.Text = "RCC - Ferramenta de Aulas";
             this.rccNotify.Visible = true;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, -11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(70, 70);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.WaitOnLoad = true;
             // 
             // controlPanel
             // 
@@ -480,9 +480,9 @@
             this.Controls.Add(this.topicCombo);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.preview);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelDadosMilitar);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "controlPanel";
@@ -490,16 +490,16 @@
             this.Text = "[RCC] - Painel de controle";
             this.Load += new System.EventHandler(this.controlPanel_Load);
             this.Shown += new System.EventHandler(this.controlPanel_Shown);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelControl.ResumeLayout(false);
+            this.panelControl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelDadosMilitar.ResumeLayout(false);
+            this.panelDadosMilitar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rcc_user)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -507,12 +507,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.Label ControlTitle;
         private System.Windows.Forms.PictureBox min;
         private System.Windows.Forms.PictureBox close;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelDadosMilitar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label rcc_user_tag;
         private System.Windows.Forms.Label label6;

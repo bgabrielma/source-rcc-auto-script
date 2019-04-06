@@ -44,12 +44,13 @@ namespace rcc_script_system
         private string nameScript;
         private string nameRCC;
         private string tagRCC;
+        private string companhiaRCC;
 
         //counters
         private int activePart;
         private bool isTopicSend;
 
-        public controlPanel(OpenFileDialog openFile, List<string> titles, List<string> comments, List<Line> lines, string nameScript, string nameRCC, string tagRCC)
+        public controlPanel(OpenFileDialog openFile, List<string> titles, List<string> comments, List<Line> lines, string nameScript, string nameRCC, string tagRCC, string companhiaRCC)
         {
             // define class's variables with recieved data
             this.titles = titles;
@@ -59,19 +60,63 @@ namespace rcc_script_system
             this.openFile = openFile;
             this.nameRCC = nameRCC;
             this.tagRCC = tagRCC;
+            this.companhiaRCC = companhiaRCC.Trim().ToUpper();
             activePart = 1;
             isTopicSend = false;
 
             readerFiles = new StreamReader(this.openFile.FileName, Encoding.GetEncoding("iso-8859-1"));
             MouseDown += new MouseEventHandler(Move_window); // binding the method to the event
             InitializeComponent();
+            colorThemeCompanhia();
 
             //disable buttons
             btnPause.Enabled = false;
             btnReset.Enabled = false;
             btnContinue.Enabled = false;
+        }
 
-
+        private void colorThemeCompanhia()
+        {
+            ControlTitle.Text = "RCC -";
+            switch (companhiaRCC)
+            {
+                case "SUP":
+                    {
+                        panelDadosMilitar.BackColor = panelControl.BackColor = panelDadosMilitar.BackColor = panel3.BackColor =  Color.Green;
+                        ControlTitle.Text += " Supervisores de Promoção";
+                        break;
+                    }
+                case "EFE":
+                    {
+                        panelDadosMilitar.BackColor = panelControl.BackColor = panelDadosMilitar.BackColor = panel3.BackColor = Color.Cyan;
+                        ControlTitle.Text += " Escola de Formação de Executivos";
+                        break;
+                    }
+                case "PROF":
+                    {
+                        panelDadosMilitar.BackColor = panelControl.BackColor = panelDadosMilitar.BackColor = panel3.BackColor = Color.Purple;
+                        ControlTitle.Text += " Professores";
+                        break;
+                    }
+                case "INS":
+                    {
+                        panelDadosMilitar.BackColor = panelControl.BackColor = panelDadosMilitar.BackColor = panel3.BackColor = Color.Brown;
+                        ControlTitle.Text += " Instrutores de Treinamento";
+                        break;
+                    }
+                case "ROND":
+                    {
+                        panelDadosMilitar.BackColor = panelControl.BackColor = panelDadosMilitar.BackColor = panel3.BackColor = Color.Orange;
+                        ControlTitle.Text += " Rondeiros";
+                        break;
+                    }
+                case "TRE":
+                    {
+                        panelDadosMilitar.BackColor = panelControl.BackColor = panelDadosMilitar.BackColor = panel3.BackColor = Color.Orange;
+                        ControlTitle.Text += " Treinadores";
+                        break;
+                    }
+            }
         }
 
         private void Move_window(object sender, MouseEventArgs e)

@@ -30,6 +30,7 @@ namespace rcc_script_system
         public static Regex COMMENT_TOKEN = new Regex(@"^\/\/");
         public static Regex MAIN_TITLE_TOKEN = new Regex(@"^>");
         public static Regex TITLE_TOKEN = new Regex(@"^#!");
+        public static Regex COMPANHIA_TOKEN = new Regex(@"^>>>");
         public static Regex NAME_TOKEN = new Regex(@"^&:");
         public static Regex PAUSE_TOKEN = new Regex(@"/\S/"); // ?
 
@@ -45,6 +46,7 @@ namespace rcc_script_system
         private string nameScript;
         private string nameRCC;
         private string tagRCC;
+        private string companhiaRCC;
 
         /**
          * TODO: System to move window 
@@ -192,6 +194,10 @@ namespace rcc_script_system
 
             while ((contentByLine = readerFiles.ReadLine()) != null)
             {
+                if(COMPANHIA_TOKEN.IsMatch(contentByLine))
+                {
+                    companhiaRCC = contentByLine.Replace(">>>", "");
+                }
                 if (TITLE_TOKEN.IsMatch(contentByLine))
                 {
                     titles.Add(contentByLine.Replace("#!", "").ToUpper());
@@ -297,7 +303,7 @@ namespace rcc_script_system
             //update infos
             updateInfosAndFillLists(txtFileUpload);
 
-            controlPanel form = new controlPanel(openFile, titles, comments, lines, nameScript, nameRCC, tagRCC);
+            controlPanel form = new controlPanel(openFile, titles, comments, lines, nameScript, nameRCC, tagRCC, companhiaRCC);
 
             if (error == 0)
             {

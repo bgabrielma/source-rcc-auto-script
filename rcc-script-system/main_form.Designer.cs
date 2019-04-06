@@ -149,9 +149,9 @@
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(376, 447);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(117, 13);
+            this.label16.Size = new System.Drawing.Size(98, 13);
             this.label16.TabIndex = 16;
-            this.label16.Text = "04 de Outubro de 2018";
+            this.label16.Text = "06 de abril de 2019";
             // 
             // label15
             // 
@@ -179,9 +179,9 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(51, 75);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(36, 13);
+            this.label13.Size = new System.Drawing.Size(25, 13);
             this.label13.TabIndex = 13;
-            this.label13.Text = "1.5.1";
+            this.label13.Text = "1.6";
             // 
             // label14
             // 
