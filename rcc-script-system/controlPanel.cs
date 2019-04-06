@@ -112,7 +112,7 @@ namespace rcc_script_system
                     }
                 case "TRE":
                     {
-                        panelDadosMilitar.BackColor = panelControl.BackColor = panelDadosMilitar.BackColor = panel3.BackColor = Color.Orange;
+                        panelDadosMilitar.BackColor = panelControl.BackColor = panelDadosMilitar.BackColor = panel3.BackColor = Color.Red;
                         ControlTitle.Text += " Treinadores";
                         break;
                     }
