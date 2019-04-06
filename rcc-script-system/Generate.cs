@@ -37,7 +37,7 @@ namespace rcc_script_system
             preview.Text += "// o programa não irá olhar para estas linhas com '//'\n";
             preview.Text += "// Nome: example\n";
             preview.Text += "// Autor: example\n";
-            preview.Text += "// Companhia. Ex: >>>SUP";
+            preview.Text += "// Companhia. Ex: >>>SUP\n";
 
             preview.Text += "// Para titulos, segue-se com um '#!'.  Ex: #!tópico 1" + "\n";
             preview.Text += "// Identificação a aula será identificada com '&'. Exemplo em baixo" + "\n";
