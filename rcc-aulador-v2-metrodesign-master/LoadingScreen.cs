@@ -28,7 +28,7 @@ namespace rcc_aulador_v2_metrodesign_master
 
         private async void startProcess_OpenForm()
         {
-            await Task.Run(() => Thread.Sleep(1500));
+            await Task.Run(() => Thread.Sleep(3500));
             startProcess();
         }
 

@@ -58,21 +58,16 @@ namespace rcc_aulador_v2_metrodesign_master
 
         private void styleComboChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-            activeColor = (MetroColorStyle)Convert.ToInt32(styleComboChoose.SelectedIndex);
+
+            int index = styleComboChoose.SelectedIndex;
+            activeColor = (MetroColorStyle)Convert.ToInt32(index);
             updateStyle_Components();
         }
 
         private void updateStyle_Components()
         {
-            controlPanelStyleManager.Style = activeColor;
-            metroTabControl1.Style = activeColor;
-            updateTheme.Style = activeColor;
-            styleComboChoose.Style = activeColor;
-            submitData.Style = activeColor;
-            borderInMilitarData.Style = activeColor;
-            importOption.Style = activeColor;
-            generateOption.Style = activeColor;
-            helpOption.Style = activeColor;
+            controlPanelStyleManager.Style = metroTabControl1.Style = updateTheme.Style = 
+                styleComboChoose.Style = submitData.Style = borderInMilitarData.Style = importOption.Style = generateOption.Style = helpOption.Style = activeColor;
 
             /* Refresh content */
             Refresh();
@@ -97,6 +92,7 @@ namespace rcc_aulador_v2_metrodesign_master
 
         private async Task LoadHabboImageFromAPIAsync(string url)
         {
+            bool err = false;
             await Task.Run(() =>
             {
                 habboManager = new WebClient();
@@ -118,18 +114,28 @@ namespace rcc_aulador_v2_metrodesign_master
                 }
                 catch (WebException e)
                 {
-                    if (e.Status == WebExceptionStatus.ProtocolError)
-                    {
-                        if (((HttpWebResponse)e.Response).StatusCode == HttpStatusCode.NotFound)
-                        {
-                            MetroMessageBox.Show(this, "Lamentamos mas não existe nenhum habbo com referencia ao nick inserido.",
-                                "Ocorreu um erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
+                    if (e.Status == WebExceptionStatus.ProtocolError && (((HttpWebResponse)e.Response).StatusCode == HttpStatusCode.NotFound))
+                        err = true;
                 }
                 finally
                 {
-                    webOperations.Close();
+                    MetroMessageBox.Show(this, 
+                        (!err) ? "Dados inseridos com sucesso!" : "Lamentamos mas não existe nenhum habbo com referencia ao nick inserido.",
+                        (!err) ? "RCC - Inserção de dados" : "Oops... erro", MessageBoxButtons.OK, 
+                        (!err) ? MessageBoxIcon.Asterisk : MessageBoxIcon.Error);
+
+                    if (!err)
+                    {
+                        webOperations.Close();
+                        rccUser.Image = habboImager;
+                        rccUser.SizeMode = PictureBoxSizeMode.CenterImage;
+                    }
+                    else
+                    {
+                        rccUser.Image = Properties.Resources.error_user;
+                        rccUser.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+
                     habboManager.Dispose();
                     Thread.Sleep(1000);
                 }
@@ -159,22 +165,16 @@ namespace rcc_aulador_v2_metrodesign_master
                 Properties.Settings.Default.Save();
                 setHelloUser();
                 notificationsNumber.Text = "(0)";
-                MetroMessageBox.Show(this, "Dados inseridos com sucesso!",
-                    "RCC - Inserção de dados", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
+                rccUser.SizeMode = PictureBoxSizeMode.CenterImage;
                 rccUser.Image = Properties.Resources.Loading_icon;
+
                 await Task.Run(() => LoadHabboImageFromAPIAsync(Properties.Settings.Default.nick));
-                rccUser.Image = habboImager;
                 return;
             }
 
             MetroMessageBox.Show(this, "Os campos em questão são obrigatórios! Tente novamente", 
                 "RCC - Inserção de dados", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
-        }
-
-        private void metroLabel3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

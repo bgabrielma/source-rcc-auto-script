@@ -39,6 +39,9 @@
             this.dataTAG = new MetroFramework.Controls.MetroTextBox();
             this.dataNickname = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
             this.styleComboChoose = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -52,15 +55,12 @@
             this.panelNotifications = new MetroFramework.Controls.MetroPanel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rccUser = new System.Windows.Forms.PictureBox();
+            this.importOption = new MetroFramework.Controls.MetroTile();
             this.helpOption = new MetroFramework.Controls.MetroTile();
             this.generateOption = new MetroFramework.Controls.MetroTile();
-            this.importOption = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
@@ -79,7 +79,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 76);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
+            this.metroTabControl1.SelectedIndex = 0;
             this.metroTabControl1.Size = new System.Drawing.Size(538, 230);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroTabControl1.TabIndex = 0;
@@ -228,6 +228,33 @@
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
             // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(431, 150);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(43, 19);
+            this.metroLabel9.TabIndex = 2;
+            this.metroLabel9.Text = "Ajuda";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(217, 150);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(110, 19);
+            this.metroLabel8.TabIndex = 2;
+            this.metroLabel8.Text = "Gerar novo script";
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(11, 150);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(131, 19);
+            this.metroLabel7.TabIndex = 2;
+            this.metroLabel7.Text = "Importar e continuar";
+            // 
             // metroTabPage3
             // 
             this.metroTabPage3.Controls.Add(this.styleComboChoose);
@@ -252,21 +279,21 @@
             this.styleComboChoose.FormattingEnabled = true;
             this.styleComboChoose.ItemHeight = 23;
             this.styleComboChoose.Items.AddRange(new object[] {
-            "Default",
-            "Black",
-            "White",
-            "Silver",
-            "Blue",
-            "Green",
-            "Lime",
-            "Teal",
-            "Orange",
-            "Brown",
-            "Pink",
+            "Padrão",
+            "Preto",
+            "Branco",
+            "Prata",
+            "Azul",
+            "Verde",
+            "Lima",
+            "Verde-azulado",
+            "Laranja",
+            "Castanho",
+            "Rosa",
             "Magenta",
-            "Purple",
-            "Red",
-            "Yellow"});
+            "Roxo",
+            "Vermelho",
+            "Amarelo"});
             this.styleComboChoose.Location = new System.Drawing.Point(273, 46);
             this.styleComboChoose.Name = "styleComboChoose";
             this.styleComboChoose.Size = new System.Drawing.Size(174, 29);
@@ -379,33 +406,6 @@
             this.metroLabel3.TabIndex = 7;
             this.metroLabel3.Text = "Todos os direitos autorais reservados à PMRCC - 2017 ©";
             // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(11, 150);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(131, 19);
-            this.metroLabel7.TabIndex = 2;
-            this.metroLabel7.Text = "Importar e continuar";
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(217, 150);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(110, 19);
-            this.metroLabel8.TabIndex = 2;
-            this.metroLabel8.Text = "Gerar novo script";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(431, 150);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(43, 19);
-            this.metroLabel9.TabIndex = 2;
-            this.metroLabel9.Text = "Ajuda";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.notifications_button;
@@ -441,6 +441,22 @@
             this.rccUser.TabStop = false;
             this.rccUser.WaitOnLoad = true;
             // 
+            // importOption
+            // 
+            this.importOption.ActiveControl = null;
+            this.importOption.BackColor = System.Drawing.Color.Transparent;
+            this.importOption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.importOption.Location = new System.Drawing.Point(25, 45);
+            this.importOption.Name = "importOption";
+            this.importOption.Size = new System.Drawing.Size(100, 100);
+            this.importOption.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.importOption.TabIndex = 5;
+            this.importOption.Text = "1";
+            this.importOption.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.import__3_;
+            this.importOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.importOption.UseSelectable = true;
+            this.importOption.UseTileImage = true;
+            // 
             // helpOption
             // 
             this.helpOption.ActiveControl = null;
@@ -472,22 +488,6 @@
             this.generateOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.generateOption.UseSelectable = true;
             this.generateOption.UseTileImage = true;
-            // 
-            // importOption
-            // 
-            this.importOption.ActiveControl = null;
-            this.importOption.BackColor = System.Drawing.Color.Transparent;
-            this.importOption.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.importOption.Location = new System.Drawing.Point(25, 45);
-            this.importOption.Name = "importOption";
-            this.importOption.Size = new System.Drawing.Size(100, 100);
-            this.importOption.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.importOption.TabIndex = 5;
-            this.importOption.Text = "1";
-            this.importOption.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.import__3_;
-            this.importOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.importOption.UseSelectable = true;
-            this.importOption.UseTileImage = true;
             // 
             // ControlForm
             // 
