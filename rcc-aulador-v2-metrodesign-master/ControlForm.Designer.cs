@@ -48,7 +48,6 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.updateTheme = new MetroFramework.Controls.MetroTile();
             this.controlPanelStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroStyleExtender1 = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.notificationsNumber = new MetroFramework.Controls.MetroLabel();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.helloUser = new MetroFramework.Controls.MetroLabel();
@@ -79,7 +78,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 76);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(538, 230);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroTabControl1.TabIndex = 0;
@@ -177,6 +176,7 @@
             this.dataTAG.UseSelectable = true;
             this.dataTAG.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.dataTAG.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.dataTAG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DataTAG_KeyDown);
             // 
             // dataNickname
             // 
@@ -207,6 +207,7 @@
             this.dataNickname.UseSelectable = true;
             this.dataNickname.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.dataNickname.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.dataNickname.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DataNickname_KeyDown);
             // 
             // metroTabPage1
             // 
@@ -249,11 +250,11 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(11, 150);
+            this.metroLabel7.Location = new System.Drawing.Point(22, 150);
             this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(131, 19);
+            this.metroLabel7.Size = new System.Drawing.Size(112, 19);
             this.metroLabel7.TabIndex = 2;
-            this.metroLabel7.Text = "Importar e continuar";
+            this.metroLabel7.Text = "Painel do aulador";
             // 
             // metroTabPage3
             // 
@@ -428,7 +429,6 @@
             // 
             // rccUser
             // 
-            this.metroStyleExtender1.SetApplyMetroTheme(this.rccUser, true);
             this.rccUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rccUser.ErrorImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.Loading_icon;
             this.rccUser.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.Loading_icon;
@@ -456,6 +456,7 @@
             this.importOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.importOption.UseSelectable = true;
             this.importOption.UseTileImage = true;
+            this.importOption.Click += new System.EventHandler(this.ImportOption_Click);
             // 
             // helpOption
             // 
@@ -537,7 +538,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private MetroFramework.Controls.MetroComboBox styleComboChoose;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Components.MetroStyleExtender metroStyleExtender1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private MetroFramework.Controls.MetroLabel notificationsNumber;
         private MetroFramework.Controls.MetroLink metroLink1;

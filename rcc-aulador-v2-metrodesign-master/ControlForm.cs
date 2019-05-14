@@ -173,5 +173,28 @@ namespace rcc_aulador_v2_metrodesign_master
             MetroMessageBox.Show(this, "Os campos em questão são obrigatórios! Tente novamente", 
                 "RCC - Inserção de dados", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
         }
+
+        private void DataNickname_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                submitData.PerformClick();
+            }
+        }
+
+        private void DataTAG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                submitData.PerformClick();
+            }
+        }
+
+        private void ImportOption_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new MainOperation(controlPanelStyleManager).ShowDialog();
+            Close();
+        }
     }
 }

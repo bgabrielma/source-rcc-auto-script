@@ -19,33 +19,35 @@ namespace rcc_aulador_v2_metrodesign_master
 {
     public partial class LoadingScreen : MetroForm
     {
-        private Thread th;
         public LoadingScreen()
         {
             InitializeComponent();
             startProcess_OpenForm();
         }
 
-        private async void startProcess_OpenForm()
+        private void startProcess_OpenForm()
         {
-            await Task.Run(() => Thread.Sleep(3500));
-            startProcess();
-        }
+            Task loadingTask = Task.Run(() => 
+            {
+                for (int i = 1; i <= 10; i++)
+                {
+                    Invoke((MethodInvoker)delegate
+                    {
+                        metroProgressBar1.Value = i * 10;
+                    });
+                    Thread.Sleep(570);
+                }
+            }).ContinueWith(delegate
+            {
+                Invoke((MethodInvoker)delegate
+                {
+                    Hide();
+                    new ControlForm().ShowDialog();
 
-        public void startProcess()
-        {
-            Opacity = 0;
-            ShowInTaskbar = false;
-            th = new Thread(openControl_Form);
-            th.SetApartmentState(ApartmentState.STA);
-            th.Start();
-        }
-
-        public void openControl_Form(object obj)
-        {
-            ControlForm x = new ControlForm();
-            x.ShowDialog();
-            th.Abort();
+                    //Release memory
+                    Dispose();
+                });
+            });
         }
     }
 }
