@@ -58,9 +58,7 @@ namespace rcc_aulador_v2_metrodesign_master
 
         private void styleComboChoose_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            int index = styleComboChoose.SelectedIndex;
-            activeColor = (MetroColorStyle)Convert.ToInt32(index);
+            activeColor = (MetroColorStyle)Convert.ToInt32(styleComboChoose.SelectedIndex);
             updateStyle_Components();
         }
 
