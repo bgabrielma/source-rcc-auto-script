@@ -86,7 +86,6 @@ namespace rcc_aulador_v2_metrodesign_master
            if(metroTabControl1.SelectedIndex == 0)
             {
                 await Task.Run(() => LoadHabboImageFromAPIAsync(dataNickname.Text));
-                rccUser.Image = habboImager;
             }
         }
 
