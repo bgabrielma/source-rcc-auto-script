@@ -22,14 +22,23 @@ namespace rcc_aulador_v2_metrodesign_master
 
         private void configureComponents(MetroStyleManager metroStyleManager)
         {
-            // Components
             StyleManager = metroStyleManager;
 
+            // Components
+            mainOperationTabControl.Style = metroStyleManager.Style;
+
+            // Select first tab
+            mainOperationTabControl.SelectedIndex = 0;
         }
 
         private void MainOperation_FormClosed(object sender, FormClosedEventArgs e)
         {
             Dispose();
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            importZone.Focus();
         }
     }
 }

@@ -80,7 +80,6 @@
             this.metroProgressBar1.Size = new System.Drawing.Size(510, 10);
             this.metroProgressBar1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroProgressBar1.TabIndex = 5;
-            this.metroProgressBar1.Value = 50;
             // 
             // metroLabel3
             // 
