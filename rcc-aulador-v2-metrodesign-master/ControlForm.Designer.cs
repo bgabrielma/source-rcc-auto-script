@@ -33,12 +33,16 @@
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
             this.borderInMilitarData = new MetroFramework.Controls.MetroTile();
+            this.rccUser = new System.Windows.Forms.PictureBox();
             this.submitData = new MetroFramework.Controls.MetroTile();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.dataTAG = new MetroFramework.Controls.MetroTextBox();
             this.dataNickname = new MetroFramework.Controls.MetroTextBox();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.importOption = new MetroFramework.Controls.MetroTile();
+            this.helpOption = new MetroFramework.Controls.MetroTile();
+            this.generateOption = new MetroFramework.Controls.MetroTile();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
@@ -52,23 +56,19 @@
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.helloUser = new MetroFramework.Controls.MetroLabel();
             this.panelNotifications = new MetroFramework.Controls.MetroPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rccUser = new System.Windows.Forms.PictureBox();
-            this.importOption = new MetroFramework.Controls.MetroTile();
-            this.helpOption = new MetroFramework.Controls.MetroTile();
-            this.generateOption = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rccUser)).BeginInit();
             this.metroTabPage1.SuspendLayout();
             this.metroTabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.controlPanelStyleManager)).BeginInit();
             this.panelNotifications.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rccUser)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl1
@@ -115,6 +115,20 @@
             this.borderInMilitarData.Style = MetroFramework.MetroColorStyle.Yellow;
             this.borderInMilitarData.TabIndex = 6;
             this.borderInMilitarData.UseSelectable = true;
+            // 
+            // rccUser
+            // 
+            this.rccUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rccUser.ErrorImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.Loading_icon;
+            this.rccUser.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.Loading_icon;
+            this.rccUser.InitialImage = ((System.Drawing.Image)(resources.GetObject("rccUser.InitialImage")));
+            this.rccUser.Location = new System.Drawing.Point(396, 20);
+            this.rccUser.Name = "rccUser";
+            this.rccUser.Size = new System.Drawing.Size(131, 130);
+            this.rccUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.rccUser.TabIndex = 5;
+            this.rccUser.TabStop = false;
+            this.rccUser.WaitOnLoad = true;
             // 
             // submitData
             // 
@@ -228,6 +242,55 @@
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // importOption
+            // 
+            this.importOption.ActiveControl = null;
+            this.importOption.BackColor = System.Drawing.Color.Transparent;
+            this.importOption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.importOption.Location = new System.Drawing.Point(25, 45);
+            this.importOption.Name = "importOption";
+            this.importOption.Size = new System.Drawing.Size(100, 100);
+            this.importOption.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.importOption.TabIndex = 5;
+            this.importOption.Text = "1";
+            this.importOption.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.import__3_;
+            this.importOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.importOption.UseSelectable = true;
+            this.importOption.UseTileImage = true;
+            this.importOption.Click += new System.EventHandler(this.ImportOption_Click);
+            // 
+            // helpOption
+            // 
+            this.helpOption.ActiveControl = null;
+            this.helpOption.BackColor = System.Drawing.Color.Transparent;
+            this.helpOption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.helpOption.Location = new System.Drawing.Point(405, 45);
+            this.helpOption.Name = "helpOption";
+            this.helpOption.Size = new System.Drawing.Size(100, 100);
+            this.helpOption.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.helpOption.TabIndex = 4;
+            this.helpOption.Text = "3";
+            this.helpOption.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.info__1_;
+            this.helpOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.helpOption.UseSelectable = true;
+            this.helpOption.UseTileImage = true;
+            // 
+            // generateOption
+            // 
+            this.generateOption.ActiveControl = null;
+            this.generateOption.BackColor = System.Drawing.Color.Transparent;
+            this.generateOption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateOption.Location = new System.Drawing.Point(225, 45);
+            this.generateOption.Name = "generateOption";
+            this.generateOption.Size = new System.Drawing.Size(100, 100);
+            this.generateOption.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.generateOption.TabIndex = 3;
+            this.generateOption.Text = "2";
+            this.generateOption.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.engineer__1_;
+            this.generateOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.generateOption.UseSelectable = true;
+            this.generateOption.UseTileImage = true;
             // 
             // metroLabel9
             // 
@@ -387,6 +450,16 @@
             this.panelNotifications.VerticalScrollbarHighlightOnWheel = false;
             this.panelNotifications.VerticalScrollbarSize = 10;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.notifications_button;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 10);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
@@ -407,16 +480,6 @@
             this.metroLabel3.TabIndex = 7;
             this.metroLabel3.Text = "Todos os direitos autorais reservados à PMRCC - 2017 ©";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.notifications_button;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 10);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.logoRCC_strog;
@@ -426,69 +489,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // rccUser
-            // 
-            this.rccUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rccUser.ErrorImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.Loading_icon;
-            this.rccUser.Image = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.Loading_icon;
-            this.rccUser.InitialImage = ((System.Drawing.Image)(resources.GetObject("rccUser.InitialImage")));
-            this.rccUser.Location = new System.Drawing.Point(396, 20);
-            this.rccUser.Name = "rccUser";
-            this.rccUser.Size = new System.Drawing.Size(131, 130);
-            this.rccUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.rccUser.TabIndex = 5;
-            this.rccUser.TabStop = false;
-            this.rccUser.WaitOnLoad = true;
-            // 
-            // importOption
-            // 
-            this.importOption.ActiveControl = null;
-            this.importOption.BackColor = System.Drawing.Color.Transparent;
-            this.importOption.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.importOption.Location = new System.Drawing.Point(25, 45);
-            this.importOption.Name = "importOption";
-            this.importOption.Size = new System.Drawing.Size(100, 100);
-            this.importOption.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.importOption.TabIndex = 5;
-            this.importOption.Text = "1";
-            this.importOption.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.import__3_;
-            this.importOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.importOption.UseSelectable = true;
-            this.importOption.UseTileImage = true;
-            this.importOption.Click += new System.EventHandler(this.ImportOption_Click);
-            // 
-            // helpOption
-            // 
-            this.helpOption.ActiveControl = null;
-            this.helpOption.BackColor = System.Drawing.Color.Transparent;
-            this.helpOption.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.helpOption.Location = new System.Drawing.Point(405, 45);
-            this.helpOption.Name = "helpOption";
-            this.helpOption.Size = new System.Drawing.Size(100, 100);
-            this.helpOption.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.helpOption.TabIndex = 4;
-            this.helpOption.Text = "3";
-            this.helpOption.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.info__1_;
-            this.helpOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.helpOption.UseSelectable = true;
-            this.helpOption.UseTileImage = true;
-            // 
-            // generateOption
-            // 
-            this.generateOption.ActiveControl = null;
-            this.generateOption.BackColor = System.Drawing.Color.Transparent;
-            this.generateOption.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.generateOption.Location = new System.Drawing.Point(225, 45);
-            this.generateOption.Name = "generateOption";
-            this.generateOption.Size = new System.Drawing.Size(100, 100);
-            this.generateOption.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.generateOption.TabIndex = 3;
-            this.generateOption.Text = "2";
-            this.generateOption.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.engineer__1_;
-            this.generateOption.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.generateOption.UseSelectable = true;
-            this.generateOption.UseTileImage = true;
             // 
             // ControlForm
             // 
@@ -511,6 +511,7 @@
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             this.metroTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rccUser)).EndInit();
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
             this.metroTabPage3.ResumeLayout(false);
@@ -520,7 +521,6 @@
             this.panelNotifications.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rccUser)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

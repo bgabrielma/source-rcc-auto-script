@@ -194,7 +194,7 @@ namespace rcc_aulador_v2_metrodesign_master
         {
             Hide();
             new MainOperation(controlPanelStyleManager).ShowDialog();
-            Close();
+            Show();
         }
     }
 }
