@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainOperation));
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.mainOperationManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.mainOperationTabControl = new MetroFramework.Controls.MetroTabControl();
@@ -46,16 +47,18 @@
             this.preVisualizacao = new MetroFramework.Controls.MetroLabel();
             this.previewBox = new System.Windows.Forms.RichTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.btnPause = new MetroFramework.Controls.MetroButton();
+            this.btnStartResume = new MetroFramework.Controls.MetroButton();
             this.tileDadosMilitar = new MetroFramework.Controls.MetroTile();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.lblProgressScript = new MetroFramework.Controls.MetroLabel();
+            this.scriptProgressBar = new MetroFramework.Controls.MetroProgressBar();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.comboBoxVelocidade = new MetroFramework.Controls.MetroComboBox();
+            this.comboTitles = new MetroFramework.Controls.MetroComboBox();
             this.richTxtAulador = new System.Windows.Forms.RichTextBox();
-            this.btnStartResume = new MetroFramework.Controls.MetroButton();
-            this.btnPause = new MetroFramework.Controls.MetroButton();
+            this.timerScript = new System.Windows.Forms.Timer(this.components);
+            this.rccNotify = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.mainOperationManager)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.importZone.SuspendLayout();
@@ -244,12 +247,12 @@
             this.metroTabPage2.Controls.Add(this.btnPause);
             this.metroTabPage2.Controls.Add(this.btnStartResume);
             this.metroTabPage2.Controls.Add(this.tileDadosMilitar);
-            this.metroTabPage2.Controls.Add(this.metroLabel4);
-            this.metroTabPage2.Controls.Add(this.metroProgressBar1);
+            this.metroTabPage2.Controls.Add(this.lblProgressScript);
+            this.metroTabPage2.Controls.Add(this.scriptProgressBar);
             this.metroTabPage2.Controls.Add(this.metroLabel3);
             this.metroTabPage2.Controls.Add(this.metroLabel1);
-            this.metroTabPage2.Controls.Add(this.metroComboBox2);
-            this.metroTabPage2.Controls.Add(this.metroComboBox1);
+            this.metroTabPage2.Controls.Add(this.comboBoxVelocidade);
+            this.metroTabPage2.Controls.Add(this.comboTitles);
             this.metroTabPage2.Controls.Add(this.richTxtAulador);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
@@ -262,6 +265,28 @@
             this.metroTabPage2.VerticalScrollbarBarColor = true;
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
+            // btnPause
+            // 
+            this.btnPause.Highlight = true;
+            this.btnPause.Location = new System.Drawing.Point(762, 400);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(134, 47);
+            this.btnPause.TabIndex = 50;
+            this.btnPause.Text = "Pausar";
+            this.btnPause.UseSelectable = true;
+            this.btnPause.Click += new System.EventHandler(this.BtnPause_Click);
+            // 
+            // btnStartResume
+            // 
+            this.btnStartResume.Highlight = true;
+            this.btnStartResume.Location = new System.Drawing.Point(588, 400);
+            this.btnStartResume.Name = "btnStartResume";
+            this.btnStartResume.Size = new System.Drawing.Size(134, 47);
+            this.btnStartResume.TabIndex = 49;
+            this.btnStartResume.Text = "Começar";
+            this.btnStartResume.UseSelectable = true;
+            this.btnStartResume.Click += new System.EventHandler(this.BtnStartResume_Click);
             // 
             // tileDadosMilitar
             // 
@@ -277,23 +302,22 @@
             this.tileDadosMilitar.UseSelectable = true;
             this.tileDadosMilitar.UseTileImage = true;
             // 
-            // metroLabel4
+            // lblProgressScript
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Small;
-            this.metroLabel4.Location = new System.Drawing.Point(552, 151);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(125, 15);
-            this.metroLabel4.TabIndex = 43;
-            this.metroLabel4.Text = "% de finalização da aula";
+            this.lblProgressScript.AutoSize = true;
+            this.lblProgressScript.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.lblProgressScript.Location = new System.Drawing.Point(552, 151);
+            this.lblProgressScript.Name = "lblProgressScript";
+            this.lblProgressScript.Size = new System.Drawing.Size(125, 15);
+            this.lblProgressScript.TabIndex = 43;
+            this.lblProgressScript.Text = "% de finalização da aula";
             // 
-            // metroProgressBar1
+            // scriptProgressBar
             // 
-            this.metroProgressBar1.Location = new System.Drawing.Point(552, 172);
-            this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(379, 16);
-            this.metroProgressBar1.TabIndex = 42;
-            this.metroProgressBar1.Value = 63;
+            this.scriptProgressBar.Location = new System.Drawing.Point(552, 172);
+            this.scriptProgressBar.Name = "scriptProgressBar";
+            this.scriptProgressBar.Size = new System.Drawing.Size(379, 16);
+            this.scriptProgressBar.TabIndex = 42;
             // 
             // metroLabel3
             // 
@@ -313,27 +337,29 @@
             this.metroLabel1.TabIndex = 40;
             this.metroLabel1.Text = "Velocidade:";
             // 
-            // metroComboBox2
+            // comboBoxVelocidade
             // 
-            this.metroComboBox2.FontSize = MetroFramework.MetroComboBoxSize.Small;
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 19;
-            this.metroComboBox2.Location = new System.Drawing.Point(552, 320);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(184, 25);
-            this.metroComboBox2.TabIndex = 39;
-            this.metroComboBox2.UseSelectable = true;
+            this.comboBoxVelocidade.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.comboBoxVelocidade.FormattingEnabled = true;
+            this.comboBoxVelocidade.ItemHeight = 19;
+            this.comboBoxVelocidade.Location = new System.Drawing.Point(552, 320);
+            this.comboBoxVelocidade.Name = "comboBoxVelocidade";
+            this.comboBoxVelocidade.Size = new System.Drawing.Size(184, 25);
+            this.comboBoxVelocidade.TabIndex = 39;
+            this.comboBoxVelocidade.UseSelectable = true;
+            this.comboBoxVelocidade.SelectedIndexChanged += new System.EventHandler(this.ComboBoxVelocidade_SelectedIndexChanged);
             // 
-            // metroComboBox1
+            // comboTitles
             // 
-            this.metroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Small;
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 19;
-            this.metroComboBox1.Location = new System.Drawing.Point(552, 248);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(382, 25);
-            this.metroComboBox1.TabIndex = 38;
-            this.metroComboBox1.UseSelectable = true;
+            this.comboTitles.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.comboTitles.FormattingEnabled = true;
+            this.comboTitles.ItemHeight = 19;
+            this.comboTitles.Location = new System.Drawing.Point(552, 248);
+            this.comboTitles.Name = "comboTitles";
+            this.comboTitles.Size = new System.Drawing.Size(382, 25);
+            this.comboTitles.TabIndex = 38;
+            this.comboTitles.UseSelectable = true;
+            this.comboTitles.SelectedIndexChanged += new System.EventHandler(this.ComboTitles_SelectedIndexChanged);
             // 
             // richTxtAulador
             // 
@@ -349,25 +375,20 @@
             this.richTxtAulador.TabIndex = 37;
             this.richTxtAulador.Text = "";
             // 
-            // btnStartResume
+            // timerScript
             // 
-            this.btnStartResume.Highlight = true;
-            this.btnStartResume.Location = new System.Drawing.Point(588, 400);
-            this.btnStartResume.Name = "btnStartResume";
-            this.btnStartResume.Size = new System.Drawing.Size(134, 47);
-            this.btnStartResume.TabIndex = 49;
-            this.btnStartResume.Text = "Começar";
-            this.btnStartResume.UseSelectable = true;
+            this.timerScript.Interval = 6000;
+            this.timerScript.Tick += new System.EventHandler(this.TimerScript_Tick);
             // 
-            // btnPause
+            // rccNotify
             // 
-            this.btnPause.Highlight = true;
-            this.btnPause.Location = new System.Drawing.Point(762, 400);
-            this.btnPause.Name = "btnPause";
-            this.btnPause.Size = new System.Drawing.Size(134, 47);
-            this.btnPause.TabIndex = 50;
-            this.btnPause.Text = "Pausar";
-            this.btnPause.UseSelectable = true;
+            this.rccNotify.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.rccNotify.BalloonTipText = "RCC";
+            this.rccNotify.BalloonTipTitle = "RCC";
+            this.rccNotify.Icon = ((System.Drawing.Icon)(resources.GetObject("rccNotify.Icon")));
+            this.rccNotify.Text = "Clique para expandir o programa!";
+            this.rccNotify.Visible = true;
+            this.rccNotify.BalloonTipClicked += new System.EventHandler(this.RccNotify_BalloonTipClicked);
             // 
             // MainOperation
             // 
@@ -410,15 +431,17 @@
         private MetroFramework.Controls.MetroLabel preVisualizacao;
         private System.Windows.Forms.RichTextBox previewBox;
         private MetroFramework.Controls.MetroTile importScript;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox comboBoxVelocidade;
+        private MetroFramework.Controls.MetroComboBox comboTitles;
         private System.Windows.Forms.RichTextBox richTxtAulador;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private MetroFramework.Controls.MetroLabel lblProgressScript;
+        private MetroFramework.Controls.MetroProgressBar scriptProgressBar;
         private MetroFramework.Controls.MetroTile tileDadosMilitar;
         private MetroFramework.Controls.MetroButton btnPause;
         private MetroFramework.Controls.MetroButton btnStartResume;
+        private System.Windows.Forms.Timer timerScript;
+        private System.Windows.Forms.NotifyIcon rccNotify;
     }
 }
