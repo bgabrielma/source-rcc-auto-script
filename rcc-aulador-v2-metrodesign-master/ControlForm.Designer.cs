@@ -83,7 +83,7 @@
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Yellow;
             this.metroTabControl1.TabIndex = 0;
             this.metroTabControl1.UseSelectable = true;
-            this.metroTabControl1.Click += new System.EventHandler(this.metroTabControl1_Click);
+            this.metroTabControl1.Click += new System.EventHandler(this.MetroTabControl1_Click);
             // 
             // metroTabPage2
             // 
@@ -248,6 +248,7 @@
             this.importOption.ActiveControl = null;
             this.importOption.BackColor = System.Drawing.Color.Transparent;
             this.importOption.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.importOption.Enabled = false;
             this.importOption.Location = new System.Drawing.Point(25, 45);
             this.importOption.Name = "importOption";
             this.importOption.Size = new System.Drawing.Size(100, 100);

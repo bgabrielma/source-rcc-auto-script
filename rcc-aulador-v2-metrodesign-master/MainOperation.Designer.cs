@@ -34,6 +34,7 @@
             this.mainOperationTabControl = new MetroFramework.Controls.MetroTabControl();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.importZone = new MetroFramework.Controls.MetroTabPage();
+            this.importScript = new MetroFramework.Controls.MetroTile();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.lblScriptSentences = new MetroFramework.Controls.MetroLabel();
@@ -45,10 +46,20 @@
             this.preVisualizacao = new MetroFramework.Controls.MetroLabel();
             this.previewBox = new System.Windows.Forms.RichTextBox();
             this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
-            this.importScript = new MetroFramework.Controls.MetroTile();
+            this.tileDadosMilitar = new MetroFramework.Controls.MetroTile();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.richTxtAulador = new System.Windows.Forms.RichTextBox();
+            this.btnStartResume = new MetroFramework.Controls.MetroButton();
+            this.btnPause = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.mainOperationManager)).BeginInit();
             this.metroTabControl1.SuspendLayout();
             this.importZone.SuspendLayout();
+            this.metroTabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog
@@ -75,7 +86,7 @@
             this.metroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTabControl1.Location = new System.Drawing.Point(20, 60);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(942, 516);
             this.metroTabControl1.TabIndex = 26;
             this.metroTabControl1.UseSelectable = true;
@@ -105,6 +116,23 @@
             this.importZone.VerticalScrollbarBarColor = true;
             this.importZone.VerticalScrollbarHighlightOnWheel = false;
             this.importZone.VerticalScrollbarSize = 10;
+            // 
+            // importScript
+            // 
+            this.importScript.ActiveControl = null;
+            this.importScript.BackColor = System.Drawing.Color.Transparent;
+            this.importScript.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.importScript.Location = new System.Drawing.Point(638, 352);
+            this.importScript.Name = "importScript";
+            this.importScript.Size = new System.Drawing.Size(244, 89);
+            this.importScript.TabIndex = 36;
+            this.importScript.Text = "Importar script";
+            this.importScript.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.importScript.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.import__3_;
+            this.importScript.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.importScript.UseSelectable = true;
+            this.importScript.UseTileImage = true;
+            this.importScript.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // metroLabel9
             // 
@@ -202,7 +230,7 @@
             this.previewBox.BackColor = System.Drawing.Color.White;
             this.previewBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.previewBox.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previewBox.Location = new System.Drawing.Point(3, 11);
+            this.previewBox.Location = new System.Drawing.Point(1, 11);
             this.previewBox.Margin = new System.Windows.Forms.Padding(10);
             this.previewBox.Name = "previewBox";
             this.previewBox.ReadOnly = true;
@@ -213,6 +241,16 @@
             // 
             // metroTabPage2
             // 
+            this.metroTabPage2.Controls.Add(this.btnPause);
+            this.metroTabPage2.Controls.Add(this.btnStartResume);
+            this.metroTabPage2.Controls.Add(this.tileDadosMilitar);
+            this.metroTabPage2.Controls.Add(this.metroLabel4);
+            this.metroTabPage2.Controls.Add(this.metroProgressBar1);
+            this.metroTabPage2.Controls.Add(this.metroLabel3);
+            this.metroTabPage2.Controls.Add(this.metroLabel1);
+            this.metroTabPage2.Controls.Add(this.metroComboBox2);
+            this.metroTabPage2.Controls.Add(this.metroComboBox1);
+            this.metroTabPage2.Controls.Add(this.richTxtAulador);
             this.metroTabPage2.HorizontalScrollbarBarColor = true;
             this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.HorizontalScrollbarSize = 10;
@@ -225,22 +263,111 @@
             this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
             this.metroTabPage2.VerticalScrollbarSize = 10;
             // 
-            // importScript
+            // tileDadosMilitar
             // 
-            this.importScript.ActiveControl = null;
-            this.importScript.BackColor = System.Drawing.Color.Transparent;
-            this.importScript.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.importScript.Location = new System.Drawing.Point(638, 352);
-            this.importScript.Name = "importScript";
-            this.importScript.Size = new System.Drawing.Size(244, 89);
-            this.importScript.TabIndex = 36;
-            this.importScript.Text = "Importar script";
-            this.importScript.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.importScript.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.import__3_;
-            this.importScript.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.importScript.UseSelectable = true;
-            this.importScript.UseTileImage = true;
-            this.importScript.Click += new System.EventHandler(this.metroButton1_Click);
+            this.tileDadosMilitar.ActiveControl = null;
+            this.tileDadosMilitar.Location = new System.Drawing.Point(552, 31);
+            this.tileDadosMilitar.Name = "tileDadosMilitar";
+            this.tileDadosMilitar.Size = new System.Drawing.Size(382, 99);
+            this.tileDadosMilitar.TabIndex = 48;
+            this.tileDadosMilitar.Text = ",SrGabriel - [SrG]";
+            this.tileDadosMilitar.TileImage = global::rcc_aulador_v2_metrodesign_master.Properties.Resources.logoRCC_strog;
+            this.tileDadosMilitar.TileImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.tileDadosMilitar.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.tileDadosMilitar.UseSelectable = true;
+            this.tileDadosMilitar.UseTileImage = true;
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.FontSize = MetroFramework.MetroLabelSize.Small;
+            this.metroLabel4.Location = new System.Drawing.Point(552, 151);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(125, 15);
+            this.metroLabel4.TabIndex = 43;
+            this.metroLabel4.Text = "% de finalização da aula";
+            // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Location = new System.Drawing.Point(552, 172);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(379, 16);
+            this.metroProgressBar1.TabIndex = 42;
+            this.metroProgressBar1.Value = 63;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(552, 226);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(111, 19);
+            this.metroLabel3.TabIndex = 41;
+            this.metroLabel3.Text = "Selecionar Tópico";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(552, 298);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel1.TabIndex = 40;
+            this.metroLabel1.Text = "Velocidade:";
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 19;
+            this.metroComboBox2.Location = new System.Drawing.Point(552, 320);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(184, 25);
+            this.metroComboBox2.TabIndex = 39;
+            this.metroComboBox2.UseSelectable = true;
+            // 
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FontSize = MetroFramework.MetroComboBoxSize.Small;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 19;
+            this.metroComboBox1.Location = new System.Drawing.Point(552, 248);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(382, 25);
+            this.metroComboBox1.TabIndex = 38;
+            this.metroComboBox1.UseSelectable = true;
+            // 
+            // richTxtAulador
+            // 
+            this.richTxtAulador.BackColor = System.Drawing.Color.White;
+            this.richTxtAulador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTxtAulador.Font = new System.Drawing.Font("Segoe UI Semilight", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTxtAulador.Location = new System.Drawing.Point(1, 11);
+            this.richTxtAulador.Margin = new System.Windows.Forms.Padding(10);
+            this.richTxtAulador.Name = "richTxtAulador";
+            this.richTxtAulador.ReadOnly = true;
+            this.richTxtAulador.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.richTxtAulador.Size = new System.Drawing.Size(535, 460);
+            this.richTxtAulador.TabIndex = 37;
+            this.richTxtAulador.Text = "";
+            // 
+            // btnStartResume
+            // 
+            this.btnStartResume.Highlight = true;
+            this.btnStartResume.Location = new System.Drawing.Point(588, 400);
+            this.btnStartResume.Name = "btnStartResume";
+            this.btnStartResume.Size = new System.Drawing.Size(134, 47);
+            this.btnStartResume.TabIndex = 49;
+            this.btnStartResume.Text = "Começar";
+            this.btnStartResume.UseSelectable = true;
+            // 
+            // btnPause
+            // 
+            this.btnPause.Highlight = true;
+            this.btnPause.Location = new System.Drawing.Point(762, 400);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(134, 47);
+            this.btnPause.TabIndex = 50;
+            this.btnPause.Text = "Pausar";
+            this.btnPause.UseSelectable = true;
             // 
             // MainOperation
             // 
@@ -255,11 +382,12 @@
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Text = "[RCC] - Main Operation";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainOperation_FormClosed);
-            this.Load += new System.EventHandler(this.MainOperation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainOperationManager)).EndInit();
             this.metroTabControl1.ResumeLayout(false);
             this.importZone.ResumeLayout(false);
             this.importZone.PerformLayout();
+            this.metroTabPage2.ResumeLayout(false);
+            this.metroTabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -282,5 +410,15 @@
         private MetroFramework.Controls.MetroLabel preVisualizacao;
         private System.Windows.Forms.RichTextBox previewBox;
         private MetroFramework.Controls.MetroTile importScript;
+        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private System.Windows.Forms.RichTextBox richTxtAulador;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private MetroFramework.Controls.MetroTile tileDadosMilitar;
+        private MetroFramework.Controls.MetroButton btnPause;
+        private MetroFramework.Controls.MetroButton btnStartResume;
     }
 }

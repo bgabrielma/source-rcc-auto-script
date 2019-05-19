@@ -18,13 +18,15 @@ namespace rcc_aulador_v2_metrodesign_master
     public partial class MainOperation : MetroForm
     {
         protected StreamReader readerFiles;
+        protected Bitmap habboImager;
+        protected MetroStyleManager metroStyleManager;
 
         // Modal variables
         protected static string FILE_NAME;
         protected static string SENTENCES;
         protected static int NUM_TOPICS;
         protected static int NUM_SENTENCES;
-        protected Boolean isImportProcessComplete = false;
+        protected bool isImportProcessComplete = false;
 
         // Token's definition
         public static Regex SENTENCE_TOKEN = new Regex(@"^>");
@@ -33,21 +35,30 @@ namespace rcc_aulador_v2_metrodesign_master
 
         private List<string> titles = new List<string>(); // #!
         private List<Sentence> lines = new List<Sentence>(); // >
+        private Militar militar = new Militar();
 
-        public MainOperation(MetroStyleManager metroStyleManager)
+        public MainOperation(MetroStyleManager metroStyleManager, Bitmap habboImager, Militar militar)
         {
+            this.metroStyleManager = metroStyleManager;
+            this.habboImager = habboImager;
+            this.militar = militar;
+
             InitializeComponent();
-            configureComponents(metroStyleManager);
+            configureComponents();
         }
 
-        private void configureComponents(MetroStyleManager metroStyleManager)
+        private void configureComponents()
         {
             StyleManager = metroStyleManager;
-            mainOperationManager.Theme = importScript.Theme = metroStyleManager.Theme;
-            mainOperationManager.Style = metroTabControl1.Style = importScript.Style = metroStyleManager.Style;
+            mainOperationManager.Theme = btnStartResume.Theme = btnPause.Theme = importScript.Theme = metroStyleManager.Theme;
+            mainOperationManager.Style = metroTabControl1.Style = importScript.Style = btnStartResume.Style = btnPause.Style = metroStyleManager.Style;
 
             // Select first tab
             metroTabControl1.SelectedIndex = 0;
+
+            //Update militar tile
+            tileDadosMilitar.TileImage = habboImager;
+            tileDadosMilitar.Text = $"Dados do militar: \n\n {militar.Name} - [{militar.Tag}]";
 
             Refresh();
         }
@@ -153,16 +164,6 @@ namespace rcc_aulador_v2_metrodesign_master
                         break;
                     }
             }
-        }
-
-        private void ImportZone_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainOperation_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

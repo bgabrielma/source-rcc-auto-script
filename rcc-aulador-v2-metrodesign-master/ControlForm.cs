@@ -21,6 +21,7 @@ namespace rcc_aulador_v2_metrodesign_master
         private WebClient habboManager;
         private Stream webOperations;
         private Bitmap habboImager;
+        private Militar militar = new Militar();
 
         public ControlForm()
         {
@@ -32,9 +33,11 @@ namespace rcc_aulador_v2_metrodesign_master
         {
             styleComboChoose.SelectedIndex = 14; /* @_param: Yellow*/
             metroTabControl1.SelectedIndex = 1;
-            setHelloUser();
-            dataNickname.Text = Properties.Settings.Default.nick;
-            dataTAG.Text = Properties.Settings.Default.tag;
+
+            dataNickname.Text = militar.Name = Properties.Settings.Default.nick;
+            dataTAG.Text = militar.Tag = Properties.Settings.Default.tag;
+
+            setHelloUser(true);
         }
 
 
@@ -73,21 +76,13 @@ namespace rcc_aulador_v2_metrodesign_master
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
-            if (Properties.Settings.Default.nick == String.Empty && Properties.Settings.Default.tag == String.Empty)
+            if (militar.Name == string.Empty && militar.Tag == string.Empty)
                 MetroMessageBox.Show(this, "Bem vindo militar, em Dados do Militar deverá indicar o seu Nickname e TAG. É obrigatório para que possa usar o programa", "RCC - Alteração/Inserção de dados", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
                 MetroMessageBox.Show(this, $"{Properties.Settings.Default.nick}, em caso de dúvidas basta contactar os seguintes: ,SrGabriel / Goufix. \nObrigado pela sua compreensão e aproveite :) #RCC", "RCC - Sem notificações / ajuda", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
-        private async void metroTabControl1_Click(object sender, EventArgs e)
-        {
-           if(metroTabControl1.SelectedIndex == 0)
-            {
-                await Task.Run(() => LoadHabboImageFromAPIAsync(dataNickname.Text));
-            }
-        }
-
-        private async Task LoadHabboImageFromAPIAsync(string url)
+        private async Task LoadHabboImageFromAPIAsync(string url, bool canShowAlert)
         {
             bool err = false;
             await Task.Run(() =>
@@ -116,15 +111,16 @@ namespace rcc_aulador_v2_metrodesign_master
                 }
                 finally
                 {
-                    MetroMessageBox.Show(this, 
-                        (!err) ? "Dados inseridos com sucesso!" : "Lamentamos mas não existe nenhum habbo com referencia ao nick inserido.",
-                        (!err) ? "RCC - Inserção de dados" : "Oops... erro", MessageBoxButtons.OK, 
-                        (!err) ? MessageBoxIcon.Asterisk : MessageBoxIcon.Error);
+                    if(canShowAlert)
+                        MetroMessageBox.Show(this, 
+                            (!err) ? "Dados inseridos com sucesso!" : "Lamentamos mas não existe nenhum habbo com referencia ao nick inserido.",
+                            (!err) ? "RCC - Inserção de dados" : "Oops... erro", MessageBoxButtons.OK, 
+                            (!err) ? MessageBoxIcon.Asterisk : MessageBoxIcon.Error);
 
                     if (!err)
                     {
                         webOperations.Close();
-                        rccUser.Image = habboImager;
+                        rccUser.Image = militar.Image = habboImager;
                         rccUser.SizeMode = PictureBoxSizeMode.CenterImage;
                     }
                     else
@@ -139,34 +135,40 @@ namespace rcc_aulador_v2_metrodesign_master
             });
         }
 
-        private void setHelloUser()
+        private async void setHelloUser(bool isFirstime)
         {
-            if (Properties.Settings.Default.nick == String.Empty)
+            if (militar.Name == string.Empty)
             {
                 helloUser.Text = $"Olá, Convidado...";
                 notificationsNumber.Text = "(1)";
             }
             else
             {
-                helloUser.Text = $"Olá, {Properties.Settings.Default.nick}...";
+                helloUser.Text = $"Olá, {militar.Name}...";
                 notificationsNumber.Text = "(0)";
             }
+
+            await Task.Run(() => LoadHabboImageFromAPIAsync(militar.Name, false));
+
+            if(isFirstime)
+                importOption.Enabled = true;
+                importOption.Style = activeColor;
         }
 
         private async void submitData_Click(object sender, EventArgs e)
         {
-            if(dataNickname.Text != String.Empty && dataTAG.Text != String.Empty)
+            if(dataNickname.Text != string.Empty && dataTAG.Text != string.Empty)
             {
-                Properties.Settings.Default.nick = dataNickname.Text;
-                Properties.Settings.Default.tag = dataTAG.Text;
+                Properties.Settings.Default.nick = militar.Name = dataNickname.Text;
+                Properties.Settings.Default.tag = militar.Tag = dataTAG.Text;
                 Properties.Settings.Default.Save();
-                setHelloUser();
+                setHelloUser(false);
                 notificationsNumber.Text = "(0)";
 
                 rccUser.SizeMode = PictureBoxSizeMode.CenterImage;
                 rccUser.Image = Properties.Resources.Loading_icon;
 
-                await Task.Run(() => LoadHabboImageFromAPIAsync(Properties.Settings.Default.nick));
+                await Task.Run(() => LoadHabboImageFromAPIAsync(militar.Name, false));
                 return;
             }
 
@@ -193,8 +195,16 @@ namespace rcc_aulador_v2_metrodesign_master
         private void ImportOption_Click(object sender, EventArgs e)
         {
             Hide();
-            new MainOperation(controlPanelStyleManager).ShowDialog();
+            new MainOperation(controlPanelStyleManager, habboImager, militar).ShowDialog();
             Show();
+        }
+
+        private async void MetroTabControl1_Click(object sender, EventArgs e)
+        {
+            if (metroTabControl1.SelectedIndex == 0)
+            {
+                await Task.Run(() => LoadHabboImageFromAPIAsync(dataNickname.Text, false));
+            }
         }
     }
 }
