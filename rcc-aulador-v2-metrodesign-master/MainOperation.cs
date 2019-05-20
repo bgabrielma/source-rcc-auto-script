@@ -310,9 +310,24 @@ namespace rcc_aulador_v2_metrodesign_master
                 lblProgressScript.Text = $"{ scriptProgressBar.Value += valuePerTopicConcluded } % de finalização da aula";
                 showEndTopicNotification();
 
+                //Pass to next topic
+                nextTopic();
+
                 return null;
             }
 
+        }
+
+        private void nextTopic()
+        {
+            try
+            {
+                comboTitles.SelectedIndex++;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                showEndOfScript();
+            }
         }
 
         private string correctLine(string line)
